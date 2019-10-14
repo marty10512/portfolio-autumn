@@ -1,0 +1,22 @@
+.social{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &__item{
+    position: relative;
+    cursor: pointer;
+    transition: .3s;
+    &:hover{
+      .social__item-link{
+          fill: $orange;
+      }
+    }
+    &-link{
+      width: 25px;
+      height: 25px;
+      fill: $beige;
+      transition: .3s;
+    }
+  }
+}

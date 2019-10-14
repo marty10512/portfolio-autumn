@@ -1,0 +1,54 @@
+section.comments
+  .container.comments__container
+    h3.comments__title Что обо мне говорят
+    .comments__slider
+      .comments__slider-arrows
+        .slider-arrows.slider-arrows--next
+          +icon('arrow-down', 'slider-arrows__item')
+        .slider-arrows.slider-arrows--prev.unactive
+          +icon('arrow-down', 'slider-arrows__item slider-arrows__item--prev')
+      .slider__content
+        .slider__content-item
+          +icon('quote', 'slider__quote')
+          .slider__comment
+            p Этот парень проходил обучение не где-то, а в LoftSchool!! 4,5 месяца ьтолько самых тяжелых испытаний и бессонных ночей!
+          .slider__author
+            .slider__author-pic
+              +image('content/dmitrij.jpg')
+            .slider__author-desc
+              .slider__author-name
+                h6 Ковальчук Дмитрий
+              .slider__author-info
+                p Основатель Loftschool
+
+        .slider__content-item
+          +icon('quote', 'slider__quote')
+          .slider__comment
+            p Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах.
+          .slider__author
+            .slider__author-pic
+              +image('content/vouwa.jpg')
+            .slider__author-desc
+              .slider__author-name
+                h6 Владимир Сабарцев
+              .slider__author-info
+                p Преподаватель
+    form.comments__form.form
+      h3.form__title Связаться со мной
+      .form__data
+        label(for="name" required).form__label
+          +icon('user', 'form__label-pic')
+          h6.form__label-title Введите ваше имя
+          input(type="text").form__label-input#name
+        label(for="email" required).form__label
+          +icon('envelope', 'form__label-pic')
+          h6.form__label-title Введите ваш email
+          input(type="email").form__label-input#email
+      label(for="letter" required).form__label.form__label--letter
+        +icon('message', 'form__label-pic')
+        h6.form__label-title Сообщение к письму
+        textarea.form__label-textarea#letter
+      label(for="submit").form__btn
+        input(type="submit").visuallyHidden
+        button(href="#").form__btn-item отправить
+      

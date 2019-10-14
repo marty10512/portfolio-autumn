@@ -1,0 +1,80 @@
+.diagram{
+  width: 59%;
+  margin-top: 50px;
+
+
+  &__title{
+    font-size: 24px;
+    font-weight: 700;
+    color: $white;
+  }
+  &__group{
+    display: flex;
+    flex-wrap: wrap;
+    &-item{
+      margin-top: 35px;
+      margin-left: 40px;
+      position: relative;
+      &:first-child{
+        margin-left: 0;
+      }
+      &:nth-child(5n){
+        margin-left: 0;
+      }
+      &:nth-child(9n){
+        margin-left: 0;
+      }
+    }
+
+  }
+}
+
+.percentage{
+  display: block;
+  width: 136px;
+  height: 136px;
+  transform: rotate(-180deg);
+
+  &__name{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    font-weight: 700;
+    color: $grey;
+  }
+}
+
+.circle{
+
+  &--under{
+  fill: transparent;
+  stroke-width: 4px;
+  stroke: #44413f;
+  }
+  &--above{
+    fill: transparent;
+    stroke-width: 9px;
+    stroke: $orange;
+    stroke-dasharray: 251;
+    stroke-dashoffset: 251;
+    animation: fill 100s linear infinite;
+    animation-play-state: paused;
+
+    &[style="animation-delay: -100s"]{
+      animation: initial;
+      stroke-dashoffset: 0;
+    }
+  }
+}
+
+@keyframes fill {
+  from{
+    stroke-dashoffset: 251;
+  }
+
+  to{
+    stroke-dashoffset: 0;
+  }
+}

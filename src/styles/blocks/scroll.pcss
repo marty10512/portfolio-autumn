@@ -1,0 +1,41 @@
+.scroll{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20vh;
+  line-height: 30px;
+
+  &__item{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    cursor: pointer;
+
+    &-title{
+    color: $white;
+    font-weight: 700;
+    opacity: .4;
+    transition: .3s;
+  }
+
+    &-icon{
+      width: 30px;
+      height: 30px;
+      fill: $white;
+      opacity: .4;
+      transition: .3s;
+    }
+
+    &:hover{
+      .scroll__item-title{
+        color: $orange;
+        opacity: 1;
+      }
+      .scroll__item-icon{
+        fill: $orange;
+        opacity: 1;
+      }
+    }
+  }
+  
+}

@@ -1,0 +1,43 @@
+.skills {
+  background: url('../images/content/skills-bg.jpg') center /cover no-repeat;
+  padding-top: 150px;
+  position: relative;
+  &:after{
+    position: absolute;
+    display: block;
+    content: "";
+    background: url('../images/content/hands.png') center center /cover no-repeat;
+    height: 707px;
+    width: 395px;
+    bottom: -60px;
+  }
+
+  &__desc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-title{
+    color: $white;
+    font-size: 30px;
+    font-weight: 700;
+    width: 52%
+    }
+
+    &-text{
+      margin-top: 59px;
+      font-weight: 700;
+      line-height: 30px;
+      color: $grey;
+      width: 52%;
+    }
+  }
+
+  &__diagram{
+    margin-top: 40px;
+    padding-bottom: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
