@@ -9,7 +9,7 @@ const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = (env, argv) => {
   const isProductionBuild = argv.mode === "production";
-  const publicPath = '/ls-advansed-portfolio.github.io/dist/';
+  const publicPath = '/portfolio.github.io/tree/gh-pages/';
 
   const pcss = {
     test: /\.(p|post|)css$/,
