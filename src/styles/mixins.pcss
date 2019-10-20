@@ -16,11 +16,32 @@
   }
 }
 
+@mixin tabletsSmall() {
+  @media screen and (max-width: $bp-tablets-small) {
+    @content;
+  }
+}
+
 @mixin phones() {
   @media screen and (max-width: $bp-phones) {
     @content;
   }
 }
+
+@mixin phonesSmall() {
+  @media screen and (max-width: $bp-phones-samll) {
+    @content;
+  }
+}
+
+//width
+$bp-desktop-hd: 1800px;
+$bp-desktop: 1200px;
+$bp-tablets: 768px;
+$bp-tablets-small: 580px;
+$bp-phones: 480px;
+$bp-phones-samll: 370px;
+
 
 // colors
 $white: #fff;
@@ -30,3 +51,14 @@ $grey: #909293;
 $dark-blue: #353e4e;
 $link: #586ed3;
 $dark-grey: #656567;
+
+.paragraph{
+  font-weight: 700;
+  line-height: 30px;
+  color: $grey;
+}
+
+.h3-title{
+  font-size: 36px;
+  font-weight: 700;
+}

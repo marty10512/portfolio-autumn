@@ -41,12 +41,12 @@
       .left{
         width: 40%;
         &-desc{
-          font-size: 16px;
           line-height: 30px;
         }
-        &-social{
-          margin-top: 30px;
-          width: 190px;
+          .social{
+            margin-top: 30px;
+            width: 190px;
+            height: unset;
 
           .social__item{
             width: 50px;
@@ -69,7 +69,6 @@
       .right{
         width: 54%;
         &-desc{
-          font-size: 16px;
           line-height: 30px;
         }
         &-designer{
@@ -77,6 +76,61 @@
           color: $white;
           font-style: italic;
         }
+      }
+    }
+  }
+}
+
+@include tablets {
+  .footer {
+
+    .menu{
+      justify-content: start;
+      &__item{
+        margin-right: 60px;
+        line-height: 50px;
+      }
+    }
+
+    &__left{
+      width: 29%;
+    }
+
+    &__right{
+      width: 65%;
+      &-content{
+        flex-direction: column;
+        .left{
+          width: 100%;
+
+          .social{
+            margin-top: 18px;
+          }
+        }
+        .right{
+          width: 100%;
+          margin-top: 60px;
+        }
+      }
+    }
+  }
+}
+
+@include phones{
+  .footer{
+    &__container{
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__left{
+      width: 100%;
+    }
+    &__right{
+      width: 100%;
+      margin-top: 50px;
+      &-content{
+        margin-top: 50px;
       }
     }
   }

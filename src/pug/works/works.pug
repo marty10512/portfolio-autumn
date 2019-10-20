@@ -1,26 +1,4 @@
 section.works
-  .container
-    h3.works__title Мои работы
-    .works__content
-      .content__slider
-        +image('content/portfolio.png', 'content__slider-item')
-        .content__slider-dots
-          +image('content/portfolio.png', 'content__slider-dots-item active')
-          +image('content/chocco.png', 'content__slider-dots-item')
-          +image('content/fitness.png', 'content__slider-dots-item')
-        .content__slider-arrows
-          .slider-arrows.slider-arrows--next
-            +icon('arrow-down', 'slider-arrows__item')
-          .slider-arrows.slider-arrows--prev.unactive
-            +icon('arrow-down', 'slider-arrows__item slider-arrows__item--prev')
-      .content__desc
-        .content__desc-tags
-          .content__desc-tags-item HTML
-          .content__desc-tags-item CSS
-          .content__desc-tags-item Javascript
-        .content__desc-title
-          h4 Сайт школы образовнаия
-        .content__desc-info
-          p Этот парень проходил обучение веб-разработке не где-то а в LoftSchool! 3,5 месяца только самых тяжелых испытаний и бессонных ночей!
-        a.content__desc-link(href="#") Посмотреть сайт
-          +icon('link', "content__desc-link-pic")
+  .container.works__container
+    h3.works__title.h3-title Мои работы
+    include ../works-slider

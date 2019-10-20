@@ -1,29 +1,25 @@
 .diagram{
-  width: 59%;
-  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
 
-
+  &__row{
+    margin-top: 50px;
+    width: 100%;
+  }
+  
   &__title{
     font-size: 24px;
     font-weight: 700;
     color: $white;
   }
   &__group{
+    margin-top: 35px;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
     &-item{
-      margin-top: 35px;
-      margin-left: 40px;
       position: relative;
-      &:first-child{
-        margin-left: 0;
-      }
-      &:nth-child(5n){
-        margin-left: 0;
-      }
-      &:nth-child(9n){
-        margin-left: 0;
-      }
     }
 
   }
@@ -55,7 +51,7 @@
   }
   &--above{
     fill: transparent;
-    stroke-width: 9px;
+    stroke-width: 8px;
     stroke: $orange;
     stroke-dasharray: 251;
     stroke-dashoffset: 251;

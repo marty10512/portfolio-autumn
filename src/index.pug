@@ -1,24 +1,22 @@
 include ./pug/mixins.pug
 
 <!DOCTYPE html>
-html(lang="en")
+html(lang="ru")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title Portfolio | main page
+    title Andrey Martemyanov Portfolio
   body
     .wrapper
       .maincontent
-        .temporarily
-          include ./pug/hero/hero
-          include ./pug/about/about
+        include ./pug/hamburger
+        .welcome-section
+          include ./pug/welcome-section/hero/hero
+          include ./pug/welcome-section/about/about
         include ./pug/skills/skills
         include ./pug/works/works
-        include ./pug/comments/comments
+        .autumn-section
+          include ./pug/autumn-section/comments/comments
+          include ./pug/autumn-section/contacts/contacts
         include ./pug/footer/footer
-
-
-        //+image('content/user.jpg', 'user-pic')
-        //+icon('link', 'link-class')
-        //.icon-bg

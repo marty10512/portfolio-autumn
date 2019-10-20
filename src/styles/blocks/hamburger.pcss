@@ -1,0 +1,136 @@
+.hamburger-btn{
+  display: none;
+  position: fixed;
+  right: 5%;
+  top: 68px;
+  cursor: pointer;
+  z-index: 20;
+  &:hover{
+    .hamburger-btn__item{
+      &-string{
+        border-color: $orange;
+      }
+      &:after{
+        border-color: $orange;
+      }
+      &:before{
+        border-color: $orange;
+      }
+    }
+  }
+  @include tablets{
+    display: block;
+  }
+
+  &__item{
+    position: relative;
+    width: 30px;
+    height: 22px;
+
+    &-string{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 24Px;
+      border: 2px solid $white;
+      opacity: 1;
+      transition: .3s;
+    }
+
+    &:after{
+      position: absolute;
+      display: block;
+      content: "";
+      bottom: 0;
+      left: 1Px;
+      width: 20Px;
+      border: 2px solid $white;
+      transition: .3s;
+    }
+    &:before{
+      position: absolute;
+      display: block;
+      content: "";
+      top: 0;
+      left: 1Px;
+      width: 20Px;
+      border: 2px solid $white;
+      transition: .3s;
+    }
+  }
+}
+
+.active{
+  .hamburger-btn__item{
+    &-string{
+      opacity: 0;
+    }
+    &:before{
+      top: 8.5px;
+      left: 0;
+      transform: rotate(-45deg);
+      border-color: $grey;
+    }
+    &:after{
+      bottom: 8.5px;
+      left: 0;
+      transform: rotate(45deg);
+      border-color: $grey;
+    }
+  }
+  
+}
+
+.hamnurger-menu{
+  display: none;
+  position: fixed;
+  height: 100vh;
+  width: 44%;
+  right: 0;
+  background-color: $white;
+  z-index: 15;
+
+  &__container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .menu{
+      position: absolute;
+      top: 25%;
+      left: 20%;
+      color: $grey;
+      flex-direction: column;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 48px;
+    }
+    .social{
+      position: absolute;
+      top: 65%;
+      left: 20%;
+      width: 165px;
+    }
+  }
+}
+
+.visible{
+  display: block;
+}
+
+@include phones {
+  .hamnurger-menu{
+    width: 100%;
+    .menu{
+      width: 84px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .social{
+      width: 145px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

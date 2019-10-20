@@ -2,7 +2,11 @@
   width: 72.5%;
   display: flex;
   flex-direction: column;
-  padding-bottom: 166px;
+
+  input::-webkit-input-placeholder { color: $white; }
+  input::-moz-placeholder { color: $white; }
+  textarea::-webkit-input-placeholder { color: $white; }
+  textarea::-moz-placeholder { color: $white; }
 
   &__title{
     font-size: 36px;
@@ -21,6 +25,14 @@
     border-bottom: 1px solid $white;
     width: 47%;
     position: relative;
+    cursor: pointer;
+    transition: .3s;
+    &:hover{
+      border-color: $orange;
+      .form__label-pic{
+        fill: $orange;
+      }
+    }
     &--letter{
       width: 100%;
       margin-top: 40px;
@@ -31,10 +43,10 @@
       width: 33px;
       height: 33px;
       top: 36px;
+      transition: .3s;
     }
 
     &-title{
-      font-size: 16px;
       font-weight: 700;
       color: $dark-grey;
       padding-left: 45px;
@@ -76,7 +88,7 @@
       margin-top: 60px;
       width: 347px;
       height: 80px;
-      background-color: $orange;
+      background: linear-gradient(to right, $orange, $orange);
       font-size: 18px;
       font-weight: 800;
       text-transform: uppercase;
@@ -88,8 +100,42 @@
         outline: none;
       }
       &:hover{
-      background-color: $white;
-      color: $grey;
+      background: linear-gradient(to right, $orange, #ff9d00);
+      }
+    }
+  }
+}
+
+@include tablets {
+  .form{
+    width: 100%;
+  }
+}
+
+@include phones {
+  .form{
+    &__title{
+      font-size: 24px;
+      text-align: center;
+    }
+    &__data{
+      flex-direction: column;
+      margin-top: 20px;
+    }
+    &__label{
+      width: 100%;
+      margin-top: 40px;
+      &-title{
+        text-align: center;
+        padding: 0;
+      }
+      &-textarea{
+        height: 144px;
+      }
+    }
+    &__btn{
+      &-item{
+        width: 100%;
       }
     }
   }

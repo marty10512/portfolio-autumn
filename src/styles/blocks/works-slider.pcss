@@ -1,0 +1,252 @@
+.works-slider{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  &:after{
+    position: absolute;
+    display: block;
+    content: "2";
+    color: #e6e6e6;
+    font-size: 300px;
+    line-height: 300px;
+    top: -12%;
+    left: 47%;
+    font-weight: 900;
+    z-index: 5;
+  }
+
+  
+
+.slider__item{
+  width: 100%;
+  height: 100%;
+  &-pic{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.arrows{
+  position: absolute;
+  bottom: 30px;
+  width: 53px;
+  height: 106px;
+  right: -53px;
+  display: flex;
+  flex-direction: column;
+}
+
+.slider-arrows{
+  width: 53px;
+  height: 53px;
+  background-color: $dark-blue;
+  position: relative;
+  cursor: pointer;
+  transition: .3s;
+
+  &:hover{
+      background-color: $orange;
+  }
+  &__item{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    fill: $white;
+    transition: .3s;
+    &--prev{
+      transform: translate(-50%, -50%) rotate(-180deg);
+    }
+  }
+}
+
+
+.slider-left{
+  position: relative;
+  width: 52%;
+  height: 353px;
+  z-index: 10;
+}
+
+.slider-right{
+  width: 28%;
+  margin-top: 7px;
+}
+
+.dots{
+  position: absolute;
+  display: flex;
+  right: 0;
+  bottom: 30px;
+  width: 93%;
+  max-width: 552px;
+  .active{
+    outline-color: $orange;
+    margin-right: 4px;
+  }
+  &__item{
+    width: 33.3333%;
+    object-fit: cover;
+    height: 106px;
+    padding: 0;
+    outline: 5px solid transparent;
+    position: relative;
+    transition: .3s;
+    &:before{
+      position: absolute;
+      content: "";
+      display: block;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: $orange;
+      opacity: 0;
+      transition: .3s;
+    }
+    &:hover{
+      .dots__item:before{
+        opacity: 1;
+      }
+    }
+    &-pic{
+      width: 100%;
+      height: 100%;
+      display: block;
+      transition: .3s;
+    }
+  }
+  
+    
+}
+
+  .slider__desc{
+
+    &-tags{
+      display: flex;
+      justify-content: space-around;
+
+      &-item{
+        background-color: #f3f5f9;
+        height: 45px;
+        font-size: 15px;
+        line-height: 45px;
+        font-weight: 600;
+        padding: 0 20px;
+        margin-left: 2px;
+        border-radius: 25px;
+
+        &:first-child{
+          margin-left: 0;
+        }
+      }
+    }
+
+    &-title{
+      margin-top: 45px;
+
+      h4{
+        font-size: 30px;
+        font-weight: 700;
+      }
+    }
+
+    &-info{
+      margin-top: 45px;
+      margin-bottom: 50px;
+      font-weight: 600;
+    }
+
+    &-link{
+      position: relative;
+      font-weight: 700;
+      text-decoration: none;
+      margin-left: 34px;
+      color: $link;
+      border-bottom: 1px solid transparent;
+      transition: .3s;
+
+      &:hover{
+        border-color: $link;
+      }
+
+      &-pic{
+        position: absolute;
+        fill: $link;
+        width: 15px;
+        height: 15px;
+        left: -34px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+@include tablets {
+  .works-slider{
+    flex-direction: column;
+
+    .slider-left{
+      width: 93%;
+    }
+
+    .slider-right{
+      width: 60%;
+      margin-top: 60px;
+      align-self: center;
+      text-align: center;
+
+      .slider__desc-tags{
+        max-width: 290px;
+        margin: auto;
+      }
+    }
+  }
+}
+
+@include phones {
+  .works{
+    &__container{
+      width: 100%;
+    }
+    &__title{
+      text-align: center;
+    }
+  }
+  .works-slider{
+    .slider-left{
+      width: 100%;
+      .dots{
+        display: none;
+      }
+      .arrows{
+        right: 0;
+        bottom: 0;
+      }
+    }
+    .slider-right{
+      width: 100%;
+      .slider__desc{
+        text-align: left;
+        &-title{
+          margin-left: 30px;
+        }
+        &-info{
+          margin-left: 30px;
+        }
+        &-link{
+          margin-left: 60px;
+        }
+      }
+    }
+    &:after{
+      display: none;
+    }
+  }
+}

@@ -1,6 +1,5 @@
 .skills {
   background: url('../images/content/skills-bg.jpg') center /cover no-repeat;
-  padding-top: 150px;
   position: relative;
   &:after{
     position: absolute;
@@ -10,6 +9,11 @@
     height: 707px;
     width: 395px;
     bottom: -60px;
+  }
+
+  &__container{
+    padding-top: 150px;
+    padding-bottom: 140px;
   }
 
   &__desc{
@@ -26,18 +30,89 @@
 
     &-text{
       margin-top: 59px;
-      font-weight: 700;
-      line-height: 30px;
-      color: $grey;
       width: 52%;
     }
   }
 
-  &__diagram{
+  .diagram{
     margin-top: 40px;
-    padding-bottom: 140px;
-    display: flex;
-    flex-direction: column;
     align-items: flex-end;
+    margin-left: 38%;
+  }
+}
+
+
+@include tablets{
+  .skills{
+    &:after{
+      background: url('../images/content/hands-2.png') center center /cover no-repeat;
+      bottom: 0;
+      width: 486px;
+      height: 337px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &__container{
+      padding-bottom: 350px;
+    }
+
+    &__desc{
+      &-title{
+        text-align: center;
+        padding: 0 10px;
+      }
+      &-text{
+        margin-top: 32px;
+        text-align: center;
+      }
+    }
+    .diagram {
+      margin-left: unset;
+      padding: 0 60px;
+      &__title{
+        text-align: center;
+      }
+      &__group{
+        justify-content: space-around;
+      }
+    }
+  }
+}
+
+@include phones {
+  .skills{
+    &__desc{
+      text-align: start;
+      align-items: unset;
+      &-title{
+        width: 100%;
+        text-align: start;
+      }
+      &-text{
+        width: 100%;
+        text-align: start;
+      }
+    }
+    .diagram{
+      padding: 0 65px;
+
+      &__group{
+        justify-content: center;
+      }
+
+      .percentage{
+        width: 115px;
+        height: 115px;
+      }
+    }
+  }
+}
+
+@include phonesSmall{
+  .skills{
+    .diagram{
+      padding: 0 10px;
+    }
   }
 }

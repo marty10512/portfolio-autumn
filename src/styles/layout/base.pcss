@@ -13,7 +13,6 @@ html {
 
 body {
   font-family: 'Open Sans', Helvetica, sans-serif;
-  font-size: 16px;
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -27,11 +26,19 @@ body {
   background-color: #fff;
 }
 
+.maincontent{
+  position: relative;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1480px;
   width: 95%;
   // width: 1490px;
+
+  @include tablets {
+    width: 90%;
+  }
 
   @include phones {
     width: 85%;
@@ -81,6 +88,7 @@ button[type="button"] {
 a {
   color: inherit;
   cursor: pointer;
+  text-decoration: none;
 }
 
 img {
