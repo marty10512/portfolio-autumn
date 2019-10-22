@@ -28,7 +28,7 @@ const dots = {
 const display = {
   template: "#works-display",
   components: { dots, arrows },
-  props: ["works", "currentWork"]
+  props: ["works", "currentWork", "currentIndex"]
 };
 
 new Vue({
@@ -41,10 +41,7 @@ new Vue({
   }),
   watch: {
     currentIndex(value) {
-      const worksAmount = this.works.length - 1;
-      if (value < 0 ) this.currentIndex = 0;
-      if (value > worksAmount )
-        this.currentIndex = worksAmount ;
+      this.makeSliderStop(value)
     }
   },
   computed: {
@@ -53,6 +50,12 @@ new Vue({
     }
   },
   methods: {
+    makeSliderStop(value){
+      const worksAmount = this.works.length - 1;
+      if (value < 0 ) this.currentIndex = 0;
+      if (value > worksAmount )
+        this.currentIndex = worksAmount ;
+    },
     makeArrWithRequiredImages(data){
       return data.map(item => {
         const requiredPic = require(`../images/content/${item.photo}`);

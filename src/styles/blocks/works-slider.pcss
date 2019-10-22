@@ -3,24 +3,28 @@
   flex-direction: row;
   justify-content: space-between;
   position: relative;
-  &:after{
-    position: absolute;
-    display: block;
-    content: "2";
-    color: #e6e6e6;
-    font-size: 300px;
-    line-height: 300px;
-    top: -12%;
-    left: 47%;
-    font-weight: 900;
-    z-index: 5;
-  }
+  
 
   
 
 .slider__item{
+  position: relative;
   width: 100%;
   height: 100%;
+  z-index: 5;
+
+  &:before{
+    position: absolute;
+    display: block;
+    content: attr(data-slide);
+    color: #e6e6e6;
+    font-size: 300px;
+    line-height: 300px;
+    top: -14%;
+    right: -21%;
+    font-weight: 900;
+    z-index: -1;
+  }
   &-pic{
     display: block;
     width: 100%;
@@ -37,6 +41,7 @@
   right: -53px;
   display: flex;
   flex-direction: column;
+  z-index: 5;
 }
 
 .slider-arrows{
@@ -85,6 +90,7 @@
   bottom: 30px;
   width: 93%;
   max-width: 552px;
+  z-index: 5;
   .active{
     outline-color: $orange;
     z-index: 10;

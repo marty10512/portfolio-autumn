@@ -3,6 +3,7 @@ script(type="text/x-template")#my-works
     display(
       :works="works"
       :current-work="currentWork"
+      :current-index="currentIndex"
       @slide="handleSlide"
     )
     info(
@@ -12,7 +13,7 @@ script(type="text/x-template")#my-works
 
 script(type="text/x-template")#works-display
   .slider-left
-    .slider__item
+    .slider__item(:data-slide="currentIndex + 1")
       img(:src="currentWork.photo").slider__item-pic
     dots(
       :works="works"
@@ -48,7 +49,10 @@ script(type="text/x-template")#works-info
           h4 {{currentWork.title}}
         .slider__desc-info
           p {{currentWork.desc}}
-        a.slider__desc-link(:href="currentWork.link") Посмотреть сайт
+        a.slider__desc-link(
+          target="_blank" 
+          :href="currentWork.link"
+          ) Посмотреть сайт
           +icon('link', "slider__desc-link-pic")
 
 script(type="text/x-template")#works-tags
