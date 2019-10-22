@@ -1,28 +1,59 @@
-.works-slider
+script(type="text/x-template")#my-works
+  .works-slider
+    display(
+      :works="works"
+      :current-work="currentWork"
+      @slide="handleSlide"
+    )
+    info(
+      :current-work="currentWork"
+    )
+    
+
+script(type="text/x-template")#works-display
   .slider-left
     .slider__item
-      +image('content/portfolio.png', 'slider__item-pic')
-    ul.dots
-      li.dots__item.active
-        +image('content/portfolio.png', 'dots__item-pic')
-      li.dots__item
-        +image('content/chocco.png', 'dots__item-pic')
-      li.dots__item
-        +image('content/fitness.png', 'dots__item-pic')
-    .arrows
-      button.slider-arrows.slider-arrows--next
+      img(:src="currentWork.photo").slider__item-pic
+    dots(
+      :works="works"
+      :current-work="currentWork"
+    )
+    arrows(
+      @slide="$emit('slide', $event)"
+    )
+
+script(type="text/x-template")#works-dots
+  ul.dots
+      li.dots__item(
+        v-for="work in works"
+        :key="work.id"
+        :class="{active: work.id === currentWork.id }"
+        )
+        img(:src="work.photo" alt="").dots__item-pic
+
+script(type="text/x-template")#works-arrows
+  .arrows
+      button(@click.prevent="$emit('slide', 'next')").slider-arrows.slider-arrows--next
         +icon('arrow-down', 'slider-arrows__item')
-      button.slider-arrows.slider-arrows--prev
+      button(@click.prevent="$emit('slide', 'prev')").slider-arrows.slider-arrows--prev
         +icon('arrow-down', 'slider-arrows__item slider-arrows__item--prev')
+
+script(type="text/x-template")#works-info
   .slider-right
-    .slider__desc
-      ul.slider__desc-tags
-        - var tags = ['HTML', 'CSS', 'JavaScript']
-        each tag in tags
-          li.slider__desc-tags-item #{tag}
-      .slider__desc-title
-        h4 Сайт школы образовнаия
-      .slider__desc-info
-        p Этот парень проходил обучение веб-разработке не где-то а в LoftSchool! 3,5 месяца только самых тяжелых испытаний и бессонных ночей!
-      a.slider__desc-link(href="#") Посмотреть сайт
-        +icon('link', "slider__desc-link-pic")
+      .slider__desc
+        tags(
+          :tags="tagsArray"
+        )
+        .slider__desc-title
+          h4 {{currentWork.title}}
+        .slider__desc-info
+          p {{currentWork.desc}}
+        a.slider__desc-link(:href="currentWork.link") Посмотреть сайт
+          +icon('link', "slider__desc-link-pic")
+
+script(type="text/x-template")#works-tags
+  ul.slider__desc-tags
+    li.slider__desc-tags-item(
+      v-for="tag in tags"
+      :key="tag"
+      ) {{tag}}
