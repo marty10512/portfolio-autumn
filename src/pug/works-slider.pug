@@ -2,12 +2,12 @@
   .slider-left
     .slider__item
       +image('content/portfolio.png', 'slider__item-pic')
-    .dots
-      button.dots__item.active
+    ul.dots
+      li.dots__item.active
         +image('content/portfolio.png', 'dots__item-pic')
-      button.dots__item
+      li.dots__item
         +image('content/chocco.png', 'dots__item-pic')
-      button.dots__item
+      li.dots__item
         +image('content/fitness.png', 'dots__item-pic')
     .arrows
       button.slider-arrows.slider-arrows--next
@@ -17,9 +17,9 @@
   .slider-right
     .slider__desc
       ul.slider__desc-tags
-        li.slider__desc-tags-item HTML
-        li.slider__desc-tags-item CSS
-        li.slider__desc-tags-item Javascript
+        - var tags = ['HTML', 'CSS', 'JavaScript']
+        each tag in tags
+          li.slider__desc-tags-item #{tag}
       .slider__desc-title
         h4 Сайт школы образовнаия
       .slider__desc-info

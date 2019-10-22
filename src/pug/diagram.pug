@@ -1,63 +1,23 @@
-.diagram
-  .diagram__row
-    .diagram__title Front-end
-    .diagram__group
-      .diagram__group-item
-        svg.percentage(viewBox="0 0 100 100" preserveAspectRatio="none")
-          circle(cx="50" cy="50" r="40").circle.circle--under
-          circle(cx="50" cy="50" r="40" 
-          style="animation-delay: -10s"
-          ).circle.circle--above
-        .percentage__name HTML 5
-      .diagram__group-item
-        svg.percentage(viewBox="0 0 100 100" preserveAspectRatio="none")
-          circle(cx="50" cy="50" r="40").circle.circle--under
-          circle(cx="50" cy="50" r="40"
-          style="animation-delay: -70s"
-          ).circle.circle--above
-        .percentage__name CSS3
-      .diagram__group-item
-        svg.percentage(viewBox="0 0 100 100" preserveAspectRatio="none")
-          circle(cx="50" cy="50" r="40").circle.circle--under
-          circle(cx="50" cy="50" r="40"
-          style="animation-delay: -40s"
-          ).circle.circle--above
-        .percentage__name Javascript
-      .diagram__group-item
-        svg.percentage(viewBox="0 0 100 100" preserveAspectRatio="none")
-          circle(cx="50" cy="50" r="40").circle.circle--under
-          circle(cx="50" cy="50" r="40"
-          style="animation-delay: -30s"
-          ).circle.circle--above
-        .percentage__name Jquery, Vue.js
-  .diagram__row
-    .diagram__title Workflow
-    .diagram__group
-      .diagram__group-item
-        svg.percentage(viewBox="0 0 100 100" preserveAspectRatio="none")
-          circle(cx="50" cy="50" r="40").circle.circle--under
-          circle(cx="50" cy="50" r="40" 
-          style="animation-delay: -10s"
-          ).circle.circle--above
-        .percentage__name GIT
-      .diagram__group-item
-        svg.percentage(viewBox="0 0 100 100" preserveAspectRatio="none")
-          circle(cx="50" cy="50" r="40").circle.circle--under
-          circle(cx="50" cy="50" r="40"
-          style="animation-delay: -70s"
-          ).circle.circle--above
-        .percentage__name Terminal
-      .diagram__group-item
-        svg.percentage(viewBox="0 0 100 100" preserveAspectRatio="none")
-          circle(cx="50" cy="50" r="40").circle.circle--under
-          circle(cx="50" cy="50" r="40"
-          style="animation-delay: -40s"
-          ).circle.circle--above
-        .percentage__name Gulp
-      .diagram__group-item
-        svg.percentage(viewBox="0 0 100 100" preserveAspectRatio="none")
-          circle(cx="50" cy="50" r="40").circle.circle--under
-          circle(cx="50" cy="50" r="40"
-          style="animation-delay: -30s"
-          ).circle.circle--above
-        .percentage__name Webpack
+script(type="text/x-template")#diagram
+  ul.diagram
+    li.diagram__row(v-for='skill in skills' :key='skill.skillsGroup')
+      diagram-row(
+        :skill='skill'
+      )
+
+script(type="text/x-template")#diagram-row
+  .diagram-row
+    h5.diagram__title {{skill.skillsGroup}}
+    ul.diagram__group
+      li.diagram__group-item(v-for='(skillPercent, skillName) in skill.skills' :key='skill.skills')
+          skill(
+            :skill-name='skillName'
+            :skill-percent='skillPercent'
+          )
+
+script(type="text/x-template")#skill
+  .skill
+    svg.percentage(viewBox="0 0 100 100" preserveAspectRatio="none")
+      circle(cx="50" cy="50" r="40").circle.circle--under
+      circle(cx="50" cy="50" r="40" ref="color-circle").circle.circle--above
+    .percentage__name {{skillName}}

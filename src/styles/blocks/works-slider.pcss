@@ -87,9 +87,10 @@
   max-width: 552px;
   .active{
     outline-color: $orange;
-    margin-right: 4px;
+    z-index: 10;
   }
   &__item{
+    cursor: pointer;
     width: 33.3333%;
     object-fit: cover;
     height: 106px;
@@ -111,7 +112,7 @@
     }
     &:hover{
       .dots__item:before{
-        opacity: 1;
+        opacity: .5;
       }
     }
     &-pic{
