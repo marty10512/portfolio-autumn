@@ -52,9 +52,9 @@ new Vue({
   methods: {
     makeSliderStop(value){
       const worksAmount = this.works.length - 1;
-      if (value < 0 ) this.currentIndex = 0;
+      if (value < 0 ) this.currentIndex = worksAmount;
       if (value > worksAmount )
-        this.currentIndex = worksAmount ;
+        this.currentIndex = this.currentIndex = 0;
     },
     makeArrWithRequiredImages(data){
       return data.map(item => {

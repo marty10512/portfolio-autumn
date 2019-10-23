@@ -1,33 +1,44 @@
-.comments-slider
-  .slider-head
-    h3.comments-slider__title.h3-title Что обо мне говорят
-    .comments-slider__arrows
-      .slider-arrows.slider-arrows--next
-        +icon('arrow-down', 'slider-arrows__item')
-      .slider-arrows.slider-arrows--prev.unactive
-        +icon('arrow-down', 'slider-arrows__item slider-arrows__item--prev')
-  .slider__content
-    .slider__content-item
-      +icon('quote', 'slider__quote')
-      .slider__comment.paragraph
-        p Этот парень проходил обучение не где-то, а в LoftSchool!! 4,5 месяца ьтолько самых тяжелых испытаний и бессонных ночей!
-      .slider__author
-        .slider__author-pic
-          +image('content/dmitrij.jpg')
-        .slider__author-desc
-          .slider__author-name
-            h6 Ковальчук Дмитрий
-          .slider__author-info
-            p Основатель Loftschool
-    .slider__content-item
-      +icon('quote', 'slider__quote')
-      .slider__comment.paragraph
-        p Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах.
-      .slider__author
-        .slider__author-pic
-          +image('content/vouwa.jpg')
-        .slider__author-desc
-          .slider__author-name
-            h6 Владимир Сабарцев
-          .slider__author-info
-            p Преподаватель
+script(type="text/x-template")#my-comments
+  .comments-slider
+    .comments__head
+      .comments__title.h3-title Что обо мне говорят
+      .comments-slider-controls
+        button(
+          type="button" 
+          @click="previous()" 
+          :disabled="currentIndex === 0" 
+          :class="{disabled: currentIndex === 0}"
+          ).comments-slider-controls__btn.comments-slider-controls__btn--prev
+        button(
+          type="button" 
+          @click="next()" 
+          :disabled="reviews.length === currentIndex" 
+          :class="{disabled: reviews.length === currentIndex}"
+          ).comments-slider-controls__btn.comments-slider-controls__btn--next
+    .comments__content
+      .reviews-slider(v-if="reviews.length")
+          flickity(
+            ref="flickity" 
+            :options="flickityOptions" 
+            @init="onInit")
+            div(
+              v-for="review in reviews" 
+              :key="review.id"
+              ).reviews-slider__item.review
+              review(
+                :review="review"
+              )
+
+script(type="text/x-template")#review-template
+  .review__item
+    .review__text.paragraph
+      p {{review.text}}
+    .review__author
+      .review__author-pic
+        img(
+          :src="review.avatar" 
+          :alt="review.autor"
+          ).review__author-img
+      .review__author-desc
+        .review__author-name {{review.autor}}
+        .review__author-position.paragraph {{review.position}}

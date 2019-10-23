@@ -6,3 +6,4 @@ if (process.env.NODE_ENV === "development") {
 import "./scripts/parallax";
 import "./scripts/diagram";
 import "./scripts/works-slider";
+import "./scripts/comments-slider";
