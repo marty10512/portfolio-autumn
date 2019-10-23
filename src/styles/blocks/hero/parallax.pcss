@@ -15,6 +15,7 @@
     will-change: transform;
     &:nth-child(1){
       .parallax__img{
+        object-fit: cover;
         min-height: 370px;
         left: 0;
         top: 0;
@@ -27,12 +28,17 @@
       }
     }
     &:nth-child(3){
-      .owner__title{
+      .parallax__title{
         position: absolute;
-        left: 34%;
-        top: 33%;
-        opacity: 1;
-        margin: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-left: 8%;
+        margin-top: -8%;
+        .owner__title{
+          opacity: 1;
+          margin: 0;
+        }
       }
     }
     &:nth-child(4){
@@ -66,6 +72,7 @@
 
     .parallax__img{
       position: absolute;
+      width: 100vw;
     }
   }
 }

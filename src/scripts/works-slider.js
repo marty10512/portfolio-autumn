@@ -41,7 +41,7 @@ new Vue({
   }),
   watch: {
     currentIndex(value) {
-      this.makeSliderStop(value)
+      this.makeSliderInfinit(value)
     }
   },
   computed: {
@@ -50,7 +50,7 @@ new Vue({
     }
   },
   methods: {
-    makeSliderStop(value){
+    makeSliderInfinit(value){
       const worksAmount = this.works.length - 1;
       if (value < 0 ) this.currentIndex = worksAmount;
       if (value > worksAmount )
@@ -72,6 +72,9 @@ new Vue({
           this.currentIndex--;
           break;
       }
+    },
+    changeWork(id){
+      this.currentIndex = id-1;
     }
   },
   created(){

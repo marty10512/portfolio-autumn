@@ -5,6 +5,7 @@ script(type="text/x-template")#my-works
       :current-work="currentWork"
       :current-index="currentIndex"
       @slide="handleSlide"
+      @dot="changeWork"
     )
     info(
       :current-work="currentWork"
@@ -18,6 +19,7 @@ script(type="text/x-template")#works-display
     dots(
       :works="works"
       :current-work="currentWork"
+      @dot="$emit('dot', $event)"
     )
     arrows(
       @slide="$emit('slide', $event)"
@@ -29,6 +31,7 @@ script(type="text/x-template")#works-dots
         v-for="work in works"
         :key="work.id"
         :class="{active: work.id === currentWork.id }"
+        @click.prevent="$emit('dot', work.id)"
         )
         img(:src="work.photo" alt="").dots__item-pic
 
