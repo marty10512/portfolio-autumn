@@ -170,52 +170,52 @@
       .container.works__container
         .section__header
           h2.section__title Блок "Работы"
-        .works-editing
-          .works-editing__container
+        .section-editing
+          .section-editing__container
 
-            .works-editing__header
-              h3.works-editing__header-title Редактирование работы
+            .section-editing__header
+              h3.section-editing__header-title Редактирование работы
 
-            .works-editing__content
+            .section-editing__content
 
               .left
-                .works-editing__photo
+                .section-editing__photo
                   p.photo__desc Перетащите или загрузите для загрузки изображения
                   label.photo__btn(for="upload")
                     button#upload(href="#").photo__btn-item.btn загрузить
 
               .right
-                label.works-editing__label
+                label.section-editing__label
                   h4.label__title Название
                   input.label__input(type="text" value="Дизайн сайта для авто салона Porsche")
-                label.works-editing__label
+                label.section-editing__label
                   h4.label__title Ссылка
                   input.label__input(type="text" value="https://www.porsche-pulkovo.ru")
-                label.works-editing__label
+                label.section-editing__label
                   h4.label__title Описание
                   textarea.label__textarea(type="text") Порше Центр Пулково - является официальным диллером марки Фольксваген и тд и тп
-                label.works-editing__label
+                label.section-editing__label
                   h4.label__title Добавление тэга
                   input.label__input(type="text" value="Jquery, Vue.js, HTML5")
-                ul.works-editing__tags
-                  li.works-editing__tags-item HTML
+                ul.section-editing__tags
+                  li.section-editing__tags-item HTML
                     button.tags-cross
-                  li.works-editing__tags-item CSS
+                  li.section-editing__tags-item CSS
                     button.tags-cross
-                  li.works-editing__tags-item Javascript
+                  li.section-editing__tags-item Javascript
                     button.tags-cross
-                .works-editing__btns
+                .section-editing__btns
                   label.btns-item
                     button.btns-item__cancel Отмена
                   label.btns-item
                     button.btns-item__save.btn сохранить
 
-        ul.works-list
-          li.works-list__item.works-list__item--btn
+        ul.section-list
+          li.section-list__item.section-list__item--btn
             label.item__label
               button.label__btn.btn +
               h6.label__title Добавить работу
-          li.works-list__item
+          li.section-list__item
             .created
               .created__pic
                 img.created__pic-item(src="../images/content/slider-1.png")
@@ -231,7 +231,7 @@
                   button.created__footer-btn-item.created__footer-btn-item--pencil
                 label.created__footer-btn Удалить
                   button.created__footer-btn-item.created__footer-btn-item--cross
-          li.works-list__item
+          li.section-list__item
             .created
               .created__pic
                 img.created__pic-item(src="../images/content/slider-2.png")
@@ -247,7 +247,7 @@
                   button.created__footer-btn-item.created__footer-btn-item--pencil
                 label.created__footer-btn Удалить
                   button.created__footer-btn-item.created__footer-btn-item--cross
-          li.works-list__item
+          li.section-list__item
             .created
               .created__pic
                 img.created__pic-item(src="../images/content/slider-3.png")
@@ -263,11 +263,115 @@
                   button.created__footer-btn-item.created__footer-btn-item--pencil
                 label.created__footer-btn Удалить
                   button.created__footer-btn-item.created__footer-btn-item--cross
-
-
-
-
     section.comments
+      .container.comments__container
+        .section__header
+          h2.section__title Блок "Отзывы"
+        .section-editing
+          .section-editing__container
+
+            .section-editing__header
+              h3.section-editing__header-title Новый отзыв
+
+            .section-editing__content
+
+              .left
+                .photo__preview
+                  img.photo__preview-item(src="../images/icons/user.png")
+                button(href="#").photo__btn-item Добавить фото
+
+              .right
+                .right__group
+                  label.section-editing__label
+                    h4.label__title Имя автора
+                    input.label__input(type="text" value="Ковальчук Дмитрий")
+                  label.section-editing__label
+                    h4.label__title Титул автора
+                    input.label__input(type="text" value="Основатель LoftSchool")
+                label.section-editing__label
+                  h4.label__title Отзыв
+                  textarea.label__textarea(type="text") Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+                .section-editing__btns
+                  label.btns-item
+                    button.btns-item__cancel Отмена
+                  label.btns-item
+                    button.btns-item__save.btn сохранить
+
+        ul.section-list
+          li.section-list__item.section-list__item--btn
+            label.item__label
+              button.label__btn.btn +
+              h6.label__title Добавить работу
+          li.section-list__item
+            .created
+              .created__author
+                .author-left
+                  img.author__pic(src="../images/content/wouwa.jpg")
+                .author-right
+                  h6.author__name Владимир Сабанцев
+                  p.author__position Преподаватель
+              .created__desc
+                .created__desc-text
+                  p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+              .created__footer
+                label.created__footer-btn Править
+                  button.created__footer-btn-item.created__footer-btn-item--pencil
+                label.created__footer-btn Удалить
+                  button.created__footer-btn-item.created__footer-btn-item--cross
+          li.section-list__item
+            .created
+              .created__author
+                .author-left
+                  img.author__pic(src="../images/content/wouwa.jpg")
+                .author-right
+                  h6.author__name Владимир Сабанцев
+                  p.author__position Преподаватель
+              .created__desc
+                .created__desc-text
+                  p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+              .created__footer
+                label.created__footer-btn Править
+                  button.created__footer-btn-item.created__footer-btn-item--pencil
+                label.created__footer-btn Удалить
+                  button.created__footer-btn-item.created__footer-btn-item--cross
+          li.section-list__item
+            .created
+              .created__author
+                .author-left
+                  img.author__pic(src="../images/content/wouwa.jpg")
+                .author-right
+                  h6.author__name Владимир Сабанцев
+                  p.author__position Преподаватель
+              .created__desc
+                .created__desc-text
+                  p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+              .created__footer
+                label.created__footer-btn Править
+                  button.created__footer-btn-item.created__footer-btn-item--pencil
+                label.created__footer-btn Удалить
+                  button.created__footer-btn-item.created__footer-btn-item--cross
+          li.section-list__item
+            .created
+              .created__author
+                .author-left
+                  img.author__pic(src="../images/content/wouwa.jpg")
+                .author-right
+                  h6.author__name Владимир Сабанцев
+                  p.author__position Преподаватель
+              .created__desc
+                .created__desc-text
+                  p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+              .created__footer
+                label.created__footer-btn Править
+                  button.created__footer-btn-item.created__footer-btn-item--pencil
+                label.created__footer-btn Удалить
+                  button.created__footer-btn-item.created__footer-btn-item--cross
+          
+
+
+
+
+    
 </template>
 <style lang="postcss">
   .admin-panel{
@@ -671,17 +775,17 @@
   .works{
     display: block;
     padding: 0 2.5%;
+  }
 
+  .section{
     &-editing{
       margin-top: 62px;
       background-color: #fff;
       box-shadow: 0 0 7px rgba(0, 0, 0, 0.205);
       padding-bottom: 31px;
-
       &__container{
         padding: 0 2.5%;
       }
-
       &__header{
         line-height: 76px;
         border-bottom: 1px solid #dedee0;
@@ -693,170 +797,155 @@
           colgr: #414c63;
         }
       }
-
       &__content{
         padding-top: 50px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 30px;
-
         .left{
-          .works-editing__photo{
-            width: 100%;
-            height: 276px;
-            background-color: #dee4ed;
-            background-image: url("data:image/svg+xml;utf8,<svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill: none; stroke: grey; stroke-width: 2; stroke-dasharray: 8 8'/></svg>");
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            .photo__desc{
-              font-weight: bold;
-              line-height: 32px;
-              color: #8f98a8;
-              max-width: 50%;
-            }
-
-            .photo__btn{
-              margin-top: 27px;
-              cursor: pointer;
-              &:hover{
-                .btn{
-                  color: #dc9322;
-                }
+        .section-editing__photo{
+          width: 100%;
+          height: 276px;
+          background-color: #dee4ed;
+          background-image: url("data:image/svg+xml;utf8,<svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill: none; stroke: grey; stroke-width: 2; stroke-dasharray: 8 8'/></svg>");
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .photo__desc{
+            font-weight: bold;
+            line-height: 32px;
+            color: #8f98a8;
+            max-width: 50%;
+          }
+          .photo__btn{
+            margin-top: 27px;
+            cursor: pointer;
+            &:hover{
+              .btn{
+                color: #dc9322;
               }
-              &-item{
-                height: 50px;
-                width: 180px;
-                border-radius: 25px;
-                line-height: 50px;
-                font-weight: bold;
+            }
+            &-item{
+              height: 50px;
+              width: 180px;
+              border-radius: 25px;
+              line-height: 50px;
+              font-weight: bold;
+            }
+          }
+        }
+        }
+        .right{
+        .section-editing__label{
+          display: block;
+          margin-top: 30px;
+          &:first-child{
+            margin-top: unset;
+          }
+          .label__title{
+            font-size: 16px;
+            line-height: 30px;
+            font-weight: bold;
+            color: #c0c3cb;
+          }
+          .label__input{
+            font-size: 16px;
+            font-weight: bold;
+            color: #414c63;
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid black;
+            line-height: 60px;
+            transition: .3s;
+            &:focus{
+              border-color: #383bcf;
+            }
+          }
+          .label__textarea{
+            line-height: 30px;
+            margin-top: 10px;
+            resize: none;
+            width: 100%;
+            height: 145px;
+            padding: 20px;
+            border-color: #c0c3cb;
+            font-size: 16px;
+            font-weight: bold;
+            color: #414c63;
+            overflow: auto;
+            transition: .3s;
+            &:focus{
+              border-color: #383bcf;
+            }
+          }
+        }
+        .section-editing__tags{
+          display: flex;
+          margin-top: 21px;
+          &-item{
+            background-color: #f3f5f9;
+            font-size: 13px;
+            line-height: 30px;
+            font-weight: 600;
+            padding:0 10px 0 20px;
+            margin-left: 10px;
+            border-radius: 25px;
+            color: #656d76;
+            &:first-child{
+              margin-left: 0;
+            }
+            .tags-cross{
+              display: inline-block;
+              height: 12px;
+              width: 12px;
+              margin-left: 8px;
+              background: svg-load("remove.svg", fill="#414c63", width="10px", height="10px") center center no-repeat;
+            }
+          }
+        }
+        .section-editing__btns{
+          margin-top: 40px;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          .btns-item{
+            cursor: pointer;
+            margin-left: 20px;
+            &__cancel{
+              line-height: 56px;
+              padding: 0 40px;
+              border-radius: 25px;
+              font-size: 16px;
+              font-weight: bold;
+              color: #1459e2;
+              border: 2px solid transparent;
+              transition: .3s;
+              &:hover{
+                border-color: #1459e2;
+              }
+            }
+            &__save{
+              line-height: 60px;
+              padding: 0 40px;
+              border-radius: 25px;
+              font-size: 16px;
+              font-weight: bold;
+              transition: .3s;
+              &:hover{
+                color: orange;
               }
             }
           }
         }
-
-        .right{
-          .works-editing__label{
-            display: block;
-            margin-top: 30px;
-            &:first-child{
-              margin-top: unset;
-            }
-
-            .label__title{
-              font-size: 16px;
-              line-height: 30px;
-              font-weight: bold;
-              color: #c0c3cb;
-            }
-
-            .label__input{
-              font-size: 16px;
-              font-weight: bold;
-              color: #414c63;
-              width: 100%;
-              border: none;
-              border-bottom: 1px solid black;
-              line-height: 60px;
-              transition: .3s;
-              &:focus{
-                border-color: #383bcf;
-              }
-            }
-
-            .label__textarea{
-              margin-top: 10px;
-              resize: none;
-              width: 100%;
-              height: 145px;
-              padding: 20px;
-              border-color: #c0c3cb;
-              font-size: 16px;
-              font-weight: bold;
-              color: #414c63;
-              overflow: auto;
-              transition: .3s;
-              &:focus{
-                border-color: #383bcf;
-              }
-            }
-          }
-
-          .works-editing__tags{
-            display: flex;
-            margin-top: 21px;
-
-            &-item{
-              background-color: #f3f5f9;
-              font-size: 13px;
-              line-height: 30px;
-              font-weight: 600;
-              padding:0 10px 0 20px;
-              margin-left: 10px;
-              border-radius: 25px;
-              color: #656d76;
-              &:first-child{
-                margin-left: 0;
-              }
-
-              .tags-cross{
-                display: inline-block;
-                height: 12px;
-                width: 12px;
-                margin-left: 8px;
-                background: svg-load("remove.svg", fill="#414c63", width="10px", height="10px") center center no-repeat;
-              }
-            }
-          }
-
-          .works-editing__btns{
-            margin-top: 40px;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-
-            .btns-item{
-              cursor: pointer;
-              margin-left: 20px;
-
-              &__cancel{
-                line-height: 56px;
-                padding: 0 40px;
-                border-radius: 25px;
-                font-size: 16px;
-                font-weight: bold;
-                color: #1459e2;
-                border: 2px solid transparent;
-                transition: .3s;
-                &:hover{
-                  border-color: #1459e2;
-                }
-              }
-              &__save{
-                line-height: 60px;
-                padding: 0 40px;
-                border-radius: 25px;
-                font-size: 16px;
-                font-weight: bold;
-                transition: .3s;
-                &:hover{
-                  color: orange;
-                }
-              }
-            }
-          }
         }
       }
     }
-
     &-list{
       margin-top: 32px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 28px;
-
       &__item{
         height: 556px;
         box-shadow: 0 0 0.4375rem rgba(0,0,0,.205);
@@ -864,7 +953,6 @@
           background: linear-gradient(90deg, #1459e2, #3f35cb);
           box-shadow: none;
         }
-
         .item__label{
           display: flex;
           flex-direction: column;
@@ -878,12 +966,10 @@
               border-color: #dc9322;
               color: #dc9322;
             }
-
             .label__title{
               color: #dc9322;
             }
           }
-        
           .label__btn{
             background: unset;
             border: 2px solid #fff;
@@ -904,12 +990,10 @@
             transition: .3s;
           }
         }
-
         .created{
           display: grid;
           grid-template-rows: 190px 1fr 100px;
           height: 100%;
-
           &__pic{
             position: relative;
             &-item{
@@ -920,7 +1004,6 @@
           }
           &__desc{
             padding: 0 5%;
-
             &-title{
               margin-top: 30px;
               h5{
@@ -938,7 +1021,6 @@
                 line-height: 30px;
               }
             }
-
             &-link{
               display: block;
               margin-top: 30px;
@@ -953,18 +1035,26 @@
             padding: 0 5%;
             display: flex;
             justify-content: space-between;
-
             &-btn{
               display: block;
               font-size: 16px;
               font-weight: bold;
               color: #a0a5b1;
               cursor: pointer;
+              &:hover{
+                .created__footer-btn-item--pencil{
+                  background: svg-load("pencil.svg", fill="#1459e2", width="15px", height="15px") center center no-repeat;
+                }
+                .created__footer-btn-item--cross{
+                  background: svg-load("remove.svg", fill="red", width="15px", height="15px") center center no-repeat;
+                }
+              }
               &-item{
                 margin-left: 15px;
                 display: inline-block;
                 height: 20px;
                 width: 20px;
+                transition: .3s;
                 &--pencil{
                   background: svg-load("pencil.svg", fill="#383bcf", width="15px", height="15px") center center no-repeat;
                 }
@@ -974,9 +1064,108 @@
               }
             }
           }
-
         }
       }
+    }
+  }
+
+  //comments
+  .comments{
+    display: block;
+    padding: 0 2.5%;
+
+    .section-editing__content{
+      grid-template-columns: 210px 1fr 110px;
+    }
+
+    .left{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .photo__preview{
+      height: 200px;
+      width: 200px;
+      background-color: #dee4ed;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      &-item{
+        display: block;
+        margin: auto;
+      }
+    }
+
+    .photo__btn-item{
+      margin-top: 25px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #1459e2;
+    }
+
+    .right__group{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 30px;
+
+      .section-editing__label{
+        margin-top: 0;
+      }
+    }
+
+    .label__textarea{
+      height: 115px;
+    }
+
+    .section-list__item{
+      height: 380px;
+      .created{
+        grid-template-rows: 110px 1fr 90px;
+      }
+    }
+
+    .created{
+      padding: 0 5%;
+    }
+
+    .created__author{
+      display: flex;
+      justify-content: space-around;
+      border-bottom: 1px solid #dedee0;
+
+      .author-left{
+        margin: auto 0;
+        .author__pic{
+          display: block;
+          height: 50px;
+          width: 50px;
+          object-fit: cover;
+          object-position: top;
+          border-radius: 50%;
+        }
+      }
+
+      .author-right{
+        margin: auto 0;
+        .author__name{
+          font-size: 18px;
+          font-weight: bold;
+        }
+        .author__position{
+          font-size: 16px;
+          font-weight: bold;
+          color: #a0a5b1;
+        }
+      }
+    }
+    .created__desc{
+      padding: 0 2.5%;
+    }
+    .created__footer{
+      padding: 0 2.5%;
     }
   }
 
