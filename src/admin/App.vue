@@ -17,41 +17,273 @@
           li.tabs-list__item Отзывы
     section.about 
       .container.about__container
-        .about__header
-          h2.about__title Блок "Обо мне"
+        .section__header
+          h2.section__title Блок "Обо мне"
           label.about__add(for="add-btn")
-            button(type="button").about__add-btn.add#add-btn
+            button(type="button").about__add-btn.btn +
             h4.about__add-title Добавить группу
         .about__content
           ul.content-list
             li.content-list__item
               form.skills-block
                 .skills-block__head
-                  label.skills-block__name(for="skills-group")
-                    input.skills-block__name-input#skills-group(placeholder="Название новой группы")
+                  input.skills-block__name(placeholder="Название новой группы")
                   label.skills-block__btn(for="submit")
                     input.visuallyHidden(type="submit")
-                    button.skills-block__btn-item(href="#")
-                  label.skills-block__close(for="close")
-                    input.visuallyHidden#close
-                    button(type="button").skills-block__close-item(href="#")
+                    button(type="button" href="#").skills-block__btn-item
+                  button(type="button" href="#").skills-block__close-item
                 .skills-block__content
                 .skills-block__footer
                   form.add-skills
-                    label.new-skill(for="skill-name")
-                      input.new-skill__input#skill-name(placeholder="Новый навык")
-                    label.new-skill-percent(for="skill-percent")
-                      input.new-skill-percent__input.new-skill__input#skill-percent(value="100")
+                    input.new-skill(placeholder="Новый навык")
+                    .new-skill-percent
+                      input.new-skill-percent__input.new-skill(value="100")
                     label.new-skill-btn(for="submit")
                       input.visuallyHidden(type="submit")
-                      button(type="button").new-skill-btn__add.add
+                      button(type="button").new-skill-btn__add.btn +
+            li.content-list__item
+              form.skills-block
+                .skills-block__head
+                  input.skills-block__name(placeholder="Название новой группы" value="Workflow")
+                  label.skills-block__btn(for="submit")
+                    input.visuallyHidden(type="submit")
+                    button(type="button" href="#").skills-block__btn-item
+                  button(type="button" href="#").skills-block__close-item
+                .skills-block__content
+                  ul.skills-list
+                    li.skills-list__skill-item
+                      form.skill-item
+                        input.item-name(value="Git" readonly)
+                        .item-percent
+                          input.item-percent__input.item-name(value="100" readonly)
+                        button(type="button" href="#").item-edit
+                        button(type="button" href="#").item-delete
+                    li.skills-list__skill-item
+                      form.skill-item
+                        input.item-name(value="Git" readonly)
+                        .item-percent
+                          input.item-percent__input.item-name(value="100" readonly)
+                        button(type="button" href="#").item-edit
+                        button(type="button" href="#").item-delete
+                    li.skills-list__skill-item
+                      form.skill-item
+                        input.item-name(value="Git" readonly)
+                        .item-percent
+                          input.item-percent__input.item-name(value="100" readonly)
+                        button(type="button" href="#").item-edit
+                        button(type="button" href="#").item-delete
+                    li.skills-list__skill-item
+                      form.skill-item
+                        input.item-name(value="Git" readonly)
+                        .item-percent
+                          input.item-percent__input.item-name(value="100" readonly)
+                        button(type="button" href="#").item-edit
+                        button(type="button" href="#").item-delete
+                    li.skills-list__skill-item
+                      form.skill-item
+                        input.item-name(value="Git" readonly)
+                        .item-percent
+                          input.item-percent__input.item-name(value="100" readonly)
+                        button(type="button" href="#").item-edit
+                        button(type="button" href="#").item-delete
+                    li.skills-list__skill-item
+                      form.skill-item
+                        input.item-name(value="Git" readonly)
+                        .item-percent
+                          input.item-percent__input.item-name(value="100" readonly)
+                        button(type="button" href="#").item-edit
+                        button(type="button" href="#").item-delete
+                .skills-block__footer
+                  form.add-skills
+                    input.new-skill(placeholder="Новый навык")
+                    .new-skill-percent
+                      input.new-skill-percent__input.new-skill(value="100")
+                    label.new-skill-btn(for="submit")
+                      input.visuallyHidden(type="submit")
+                      button(type="button").new-skill-btn__add.btn +
+            li.content-list__item
+              form.skills-block
+                .skills-block__head
+                  input.skills-block__name(placeholder="Название новой группы" value="Workflow")
+                  label.skills-block__btn(for="submit")
+                    input.visuallyHidden(type="submit")
+                    button(type="button" href="#").skills-block__btn-item
+                  button(type="button" href="#").skills-block__close-item
+                .skills-block__content
+                  ul.skills-list
+                    li.skills-list__skill-item
+                      form.skill-item
+                        input.item-name(value="Git" readonly)
+                        .item-percent
+                          input.item-percent__input.item-name(value="100" readonly)
+                        button(type="button" href="#").item-edit
+                        button(type="button" href="#").item-delete
+                    li.skills-list__skill-item
+                      form.skill-item.active
+                        input.item-name(value="Git")
+                        .item-percent
+                          input.item-percent__input.item-name(value="100")
+                        button(type="button" href="#").item-edit
+                        button(type="button" href="#").item-delete
+                        label.skills-block__btn(for="submit")
+                          input.visuallyHidden(type="submit")
+                          button(type="button" href="#").skills-block__btn-item
+                        button(type="button" href="#").skills-block__close-item
 
+                    li.skills-list__skill-item
+                      form.skill-item
+                        input.item-name(value="Git" readonly)
+                        .item-percent
+                          input.item-percent__input.item-name(value="100" readonly)
+                        button(type="button" href="#").item-edit
+                        button(type="button" href="#").item-delete
+                    li.skills-list__skill-item
+                      form.skill-item
+                        input.item-name(value="Git" readonly)
+                        .item-percent
+                          input.item-percent__input.item-name(value="100" readonly)
+                        button(type="button" href="#").item-edit
+                        button(type="button" href="#").item-delete
+                    li.skills-list__skill-item
+                      form.skill-item
+                        input.item-name(value="Git" readonly)
+                        .item-percent
+                          input.item-percent__input.item-name(value="100" readonly)
+                        button(type="button" href="#").item-edit
+                        button(type="button" href="#").item-delete
+                    li.skills-list__skill-item
+                      form.skill-item
+                        input.item-name(value="Git" readonly)
+                        .item-percent
+                          input.item-percent__input.item-name(value="100" readonly)
+                        button(type="button" href="#").item-edit
+                        button(type="button" href="#").item-delete
+                .skills-block__footer
+                  form.add-skills
+                    input.new-skill(placeholder="Новый навык")
+                    .new-skill-percent
+                      input.new-skill-percent__input.new-skill(value="100")
+                    label.new-skill-btn(for="submit")
+                      input.visuallyHidden(type="submit")
+                      button(type="button").new-skill-btn__add.btn +
+    section.works
+      .container.works__container
+        .section__header
+          h2.section__title Блок "Работы"
+        .works-editing
+          .works-editing__container
+
+            .works-editing__header
+              h3.works-editing__header-title Редактирование работы
+
+            .works-editing__content
+
+              .left
+                .works-editing__photo
+                  p.photo__desc Перетащите или загрузите для загрузки изображения
+                  label.photo__btn(for="upload")
+                    button#upload(href="#").photo__btn-item.btn загрузить
+
+              .right
+                label.works-editing__label
+                  h4.label__title Название
+                  input.label__input(type="text" value="Дизайн сайта для авто салона Porsche")
+                label.works-editing__label
+                  h4.label__title Ссылка
+                  input.label__input(type="text" value="https://www.porsche-pulkovo.ru")
+                label.works-editing__label
+                  h4.label__title Описание
+                  textarea.label__textarea(type="text") Порше Центр Пулково - является официальным диллером марки Фольксваген и тд и тп
+                label.works-editing__label
+                  h4.label__title Добавление тэга
+                  input.label__input(type="text" value="Jquery, Vue.js, HTML5")
+                ul.works-editing__tags
+                  li.works-editing__tags-item HTML
+                    button.tags-cross
+                  li.works-editing__tags-item CSS
+                    button.tags-cross
+                  li.works-editing__tags-item Javascript
+                    button.tags-cross
+                .works-editing__btns
+                  label.btns-item
+                    button.btns-item__cancel Отмена
+                  label.btns-item
+                    button.btns-item__save.btn сохранить
+
+        ul.works-list
+          li.works-list__item.works-list__item--btn
+            label.item__label
+              button.label__btn.btn +
+              h6.label__title Добавить работу
+          li.works-list__item
+            .created
+              .created__pic
+                img.created__pic-item(src="../images/content/slider-1.png")
+              .created__desc
+                .created__desc-title 
+                  h5 Сайт школы образования
+                .created__desc-text
+                  p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+                label.created__desc-link
+                  <link href="http://loftschool.ru"> http://loftschool.ru
+              .created__footer
+                label.created__footer-btn Править
+                  button.created__footer-btn-item.created__footer-btn-item--pencil
+                label.created__footer-btn Удалить
+                  button.created__footer-btn-item.created__footer-btn-item--cross
+          li.works-list__item
+            .created
+              .created__pic
+                img.created__pic-item(src="../images/content/slider-2.png")
+              .created__desc
+                .created__desc-title 
+                  h5 Сайт школы образования
+                .created__desc-text
+                  p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+                label.created__desc-link
+                  <link href="http://loftschool.ru"> http://loftschool.ru
+              .created__footer
+                label.created__footer-btn Править
+                  button.created__footer-btn-item.created__footer-btn-item--pencil
+                label.created__footer-btn Удалить
+                  button.created__footer-btn-item.created__footer-btn-item--cross
+          li.works-list__item
+            .created
+              .created__pic
+                img.created__pic-item(src="../images/content/slider-3.png")
+              .created__desc
+                .created__desc-title 
+                  h5 Сайт школы образования
+                .created__desc-text
+                  p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+                label.created__desc-link
+                  <link href="http://loftschool.ru"> http://loftschool.ru
+              .created__footer
+                label.created__footer-btn Править
+                  button.created__footer-btn-item.created__footer-btn-item--pencil
+                label.created__footer-btn Удалить
+                  button.created__footer-btn-item.created__footer-btn-item--cross
+
+
+
+
+    section.comments
 </template>
 <style lang="postcss">
   .admin-panel{
     min-height: 100vh;
     display: grid;
     grid-template-rows: 80px 80px 1fr;
+    background-color: #f7f9fe;
+    padding-bottom: 31px;
+  }
+
+  .btn{
+    background: linear-gradient(90deg, #1459e2, #3f35cb);
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    transition: .3s;
   }
   //header
   .admin-header{
@@ -137,37 +369,40 @@
       }
     }
   }
-
-  //about
-  .about{
-    background-color: #f7f9fe;
-    display: block;
-
-    &__header{
-      display: flex;
-      padding-top:60px;
-    }
-    &__title{
+  //section
+  .section__header{
+    display: flex;
+    padding-top:60px;
+    .section__title{
       font-weight: bold;
       font-size: 21px;
       color: #414c63;
     }
+  }
+
+  //about
+  .about{
+    display: block;
+    padding: 0 2.5%;
+    
     &__add{
       display: flex;
       margin-left: 59px;
       cursor: pointer;
       &:hover{
         .about__add-title{
-        border-color: #383bcf;
-      }}
+          border-color: #383bcf;
+        }
+        .btn{
+          color: #dc9322;
+        }
+      }
     
       &-btn{        
         width: 20px;
         height: 20px;
-        &:after{
-          font-size: 16px;
-          height: 19Px;
-        }
+        border-radius: 50%;
+        margin: auto;
       }
       &-title{
         margin-left: 14px;
@@ -187,11 +422,15 @@
         grid-gap: 32px;
         justify-items: stretch;
         align-items: strech;
+        ::-webkit-input-placeholder{
+          color: #b8bcc5;
+        }
 
         &__item{
           max-width: 557px;
           max-height: 420px;
           background-color: #fff;
+          box-shadow: 0 0 7px rgba(0, 0, 0, 0.205);
 
           .skills-block{
             display: grid;
@@ -207,17 +446,17 @@
 
             &__name{
               padding: 0 10px;
-              ::-webkit-input-placeholder{
-                color: #b2b6bf;
-              }
-              &-input{
-                width: 300px;
-                border: none;
-                border-bottom: 1px solid black;
-                font-size: 18px;
-                line-height: 34px;
-                font-weight: bold;
-                color: #414c63;
+              width: 300px;
+              border: none;
+              border-bottom: 1px solid black;
+              font-size: 18px;
+              line-height: 34px;
+              height: 34px;
+              font-weight: bold;
+              color: #414c63;
+              transition: .3s;
+              &:focus{
+                border-color: #383bcf;
               }
             }
 
@@ -227,41 +466,157 @@
               &-item{
                 width: 20px;
                 height: 20px;
-                background: url('../images/icons/tick.png') center center no-repeat;
+                background: svg-load("tick.svg", fill="#00d70a", width="15px", height="15px") center center no-repeat;
+                transition: .3s;
+                &:hover{
+                  background: svg-load("tick.svg", fill="green", width="15px", height="15px") center center no-repeat;
+                }
               }
             }
             &__close{
               &-item{
                 width: 20px;
                 height: 20px;
-                background: url('../images/icons/cross.png') center center no-repeat;
+                background: svg-load("remove.svg", fill="#bf2929", width="13px", height="13px") center center no-repeat;
+                transition: .3s;
+                &:hover{
+                  background: svg-load("remove.svg", fill="red", width="13px", height="13px") center center no-repeat;
+                }
               }
             }
 
             &__content{
+              width: 95%;
+              overflow: auto;
+              .skills-list{
+                display: flex;
+                flex-direction: column;
 
+                &__skill-item{
+                  width: 100%;
+                  padding-top: 3%;
+                  
+                  .skills-block__btn{
+                    display: none;
+                    margin: auto;
+                  }
+                  .skills-block__close-item{
+                    display: none;
+                    margin: auto;
+                  }
+                  
+
+                  .skill-item{
+                    display: grid;
+                    grid-template-columns: 1fr 90px 30px 30px;
+                    line-height: 32px;
+
+                    input:read-only{
+                      border: none;
+                    }
+
+                    .item-name{
+                      width: 90%;
+                      color: #414c63;
+                      padding: 0 10px;
+                      border: none;
+                      border-bottom: 1px solid #000;
+                      transition: .3s;
+                      &:focus{
+                        border-color: #383bcf;
+                      }
+                    }
+                    .item-percent{
+                      display: block;
+                      position: relative;
+                      &:after{
+                        position: absolute;
+                        display: block;
+                        content: "%";
+                        color: #414c63;
+                        width: 20px;
+                        height: 20px;
+                        line-height: 20px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: 25%;
+                      }
+
+                      &__input{
+                        line-height: 32px;
+                      }
+                    }
+                    .item-edit{
+                      display: block;
+                      height: 30px;
+                      width: 30px;
+                      display: block;
+                      background: svg-load("pencil.svg", fill="#a0a5b1", width="15px", height="15px") center center no-repeat;
+                      transition: .3s;
+                      &:hover{
+                        background: svg-load("pencil.svg", fill="#414c63", width="15px", height="15px") center center no-repeat;
+                      }
+                    }
+                    .item-delete{
+                      display: block;
+                      height: 30px;
+                      width: 30px;
+                      display: block;
+                      background: svg-load("trash.svg", fill="#a0a5b1", width="15px", height="15px") center center no-repeat;
+                      transition: .3s;
+                      &:hover{
+                        background: svg-load("trash.svg", fill="#414c63", width="15px", height="15px") center center no-repeat;
+                      }
+                    }
+                    
+
+                  }
+                  .active{
+                    .item-edit{
+                      display: none;
+                    }
+                    .item-delete{
+                      display: none;
+                    }
+                    .skills-block__btn{
+                    display: flex;
+                    }
+                    .skills-block__close-item{
+                      display: block;
+                    }
+                  }
+                }
+              }
             }
 
             &__footer{
               padding: 0 10px;
+              width: 100%;
+              display: flex;
+              justify-content: flex-end;
               ::-webkit-input-placeholder{
                 color: #b2b6bf;
               }
 
               .add-skills{
+                display: flex;
+                padding-bottom: 51px;
                 
                 .new-skill{
-                  &__input{
-                    border: none;
-                    border-bottom: 1px solid #000;
-                    font-size: 16px;
-                    line-height: 34px;
-                    width: 220px;
-                    padding: 0 20px;
+                  display: block;
+                  border: none;
+                  border-bottom: 1px solid #000;
+                  font-size: 16px;
+                  line-height: 34px;
+                  width: 220px;
+                  padding: 0 20px;
+                  &:focus{
+                    border-color: #383bcf;
                   }
 
                   &-percent{
                     margin-left: 10px;
+                    display: block;
                     position: relative;
                     &:after{
                       position: absolute;
@@ -269,25 +624,37 @@
                       content: "%";
                       width: 20px;
                       height: 20px;
-                      top: 0;
+                      line-height: 20px;
+                      top: 50%;
+                      transform: translateY(-50%);
                       right:0;
                     }
 
                     &__input{
+                      height: 100%;
                       width: 67px;
                       padding: 0 10px;
-                      
                     }
                   }
 
                   &-btn{
                     margin-left: 30px;
-                    width: 100%;
-                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    &:hover{
+                      .btn{
+                        color: #dc9322;
+                      }
+                    }
 
                     &__add{
                       width: 40px;
                       height: 40px;
+                      border-radius: 50%;
+                      font-size: 30px;
+                      font-weight: bold;
+                      line-height: 31px;
                     }
                   }
                 }
@@ -298,23 +665,320 @@
         }
       }
     }
-    .add{
-      position: relative;
-      border-radius: 50%;
-      background: linear-gradient(90deg, #1955e0, #3f35cb);
-      margin: auto;
-      &:after{
-        position: absolute;
-        display: block;
-        content: "+";
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: #fff;
+  }
+
+  //works
+  .works{
+    display: block;
+    padding: 0 2.5%;
+
+    &-editing{
+      margin-top: 62px;
+      background-color: #fff;
+      box-shadow: 0 0 7px rgba(0, 0, 0, 0.205);
+      padding-bottom: 31px;
+
+      &__container{
+        padding: 0 2.5%;
+      }
+
+      &__header{
+        line-height: 76px;
+        border-bottom: 1px solid #dedee0;
+        width: 100%;
+        padding: 0 10px;
+        &-title{
+          font-size: 18px;
+          font-weight: bold;
+          colgr: #414c63;
+        }
+      }
+
+      &__content{
+        padding-top: 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+
+        .left{
+          .works-editing__photo{
+            width: 100%;
+            height: 276px;
+            background-color: #dee4ed;
+            background-image: url("data:image/svg+xml;utf8,<svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill: none; stroke: grey; stroke-width: 2; stroke-dasharray: 8 8'/></svg>");
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .photo__desc{
+              font-weight: bold;
+              line-height: 32px;
+              color: #8f98a8;
+              max-width: 50%;
+            }
+
+            .photo__btn{
+              margin-top: 27px;
+              cursor: pointer;
+              &:hover{
+                .btn{
+                  color: #dc9322;
+                }
+              }
+              &-item{
+                height: 50px;
+                width: 180px;
+                border-radius: 25px;
+                line-height: 50px;
+                font-weight: bold;
+              }
+            }
+          }
+        }
+
+        .right{
+          .works-editing__label{
+            display: block;
+            margin-top: 30px;
+            &:first-child{
+              margin-top: unset;
+            }
+
+            .label__title{
+              font-size: 16px;
+              line-height: 30px;
+              font-weight: bold;
+              color: #c0c3cb;
+            }
+
+            .label__input{
+              font-size: 16px;
+              font-weight: bold;
+              color: #414c63;
+              width: 100%;
+              border: none;
+              border-bottom: 1px solid black;
+              line-height: 60px;
+              transition: .3s;
+              &:focus{
+                border-color: #383bcf;
+              }
+            }
+
+            .label__textarea{
+              margin-top: 10px;
+              resize: none;
+              width: 100%;
+              height: 145px;
+              padding: 20px;
+              border-color: #c0c3cb;
+              font-size: 16px;
+              font-weight: bold;
+              color: #414c63;
+              overflow: auto;
+              transition: .3s;
+              &:focus{
+                border-color: #383bcf;
+              }
+            }
+          }
+
+          .works-editing__tags{
+            display: flex;
+            margin-top: 21px;
+
+            &-item{
+              background-color: #f3f5f9;
+              font-size: 13px;
+              line-height: 30px;
+              font-weight: 600;
+              padding:0 10px 0 20px;
+              margin-left: 10px;
+              border-radius: 25px;
+              color: #656d76;
+              &:first-child{
+                margin-left: 0;
+              }
+
+              .tags-cross{
+                display: inline-block;
+                height: 12px;
+                width: 12px;
+                margin-left: 8px;
+                background: svg-load("remove.svg", fill="#414c63", width="10px", height="10px") center center no-repeat;
+              }
+            }
+          }
+
+          .works-editing__btns{
+            margin-top: 40px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+
+            .btns-item{
+              cursor: pointer;
+              margin-left: 20px;
+
+              &__cancel{
+                line-height: 56px;
+                padding: 0 40px;
+                border-radius: 25px;
+                font-size: 16px;
+                font-weight: bold;
+                color: #1459e2;
+                border: 2px solid transparent;
+                transition: .3s;
+                &:hover{
+                  border-color: #1459e2;
+                }
+              }
+              &__save{
+                line-height: 60px;
+                padding: 0 40px;
+                border-radius: 25px;
+                font-size: 16px;
+                font-weight: bold;
+                transition: .3s;
+                &:hover{
+                  color: orange;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &-list{
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 28px;
+
+      &__item{
+        height: 556px;
+        box-shadow: 0 0 0.4375rem rgba(0,0,0,.205);
+        &--btn{
+          background: linear-gradient(90deg, #1459e2, #3f35cb);
+          box-shadow: none;
+        }
+
+        .item__label{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          width: 100%;
+          cursor: pointer;
+          &:hover{
+            .label__btn{
+              border-color: #dc9322;
+              color: #dc9322;
+            }
+
+            .label__title{
+              color: #dc9322;
+            }
+          }
+        
+          .label__btn{
+            background: unset;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            font-size: 72px;
+            width: 150px;
+            height: 150px;
+            transition: .3s;
+          }
+          .label__title{
+            margin-top: 30px;
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 30px;
+            padding: 0 27%;
+            text-align: center;
+            transition: .3s;
+          }
+        }
+
+        .created{
+          display: grid;
+          grid-template-rows: 190px 1fr 100px;
+          height: 100%;
+
+          &__pic{
+            position: relative;
+            &-item{
+              display: block;
+              width: 100%;
+              height: 100%;
+            }
+          }
+          &__desc{
+            padding: 0 5%;
+
+            &-title{
+              margin-top: 30px;
+              h5{
+                font-size: 18px;
+                font-weight: bold;
+                line-height: 30px;
+              }
+            }
+            &-text{
+              margin-top: 10px;
+              p{
+                font-size: 16px;
+                font-weight: bold;
+                color: #afb4be;
+                line-height: 30px;
+              }
+            }
+
+            &-link{
+              display: block;
+              margin-top: 30px;
+              cursor: pointer;
+              font-size: 16px;
+              font-weight: bold;
+              color: #1459e2;
+            }
+          }
+          &__footer{
+            margin: auto 0;
+            padding: 0 5%;
+            display: flex;
+            justify-content: space-between;
+
+            &-btn{
+              display: block;
+              font-size: 16px;
+              font-weight: bold;
+              color: #a0a5b1;
+              cursor: pointer;
+              &-item{
+                margin-left: 15px;
+                display: inline-block;
+                height: 20px;
+                width: 20px;
+                &--pencil{
+                  background: svg-load("pencil.svg", fill="#383bcf", width="15px", height="15px") center center no-repeat;
+                }
+                &--cross{
+                  background: svg-load("remove.svg", fill="#c92e2e", width="15px", height="15px") center center no-repeat;
+                }
+              }
+            }
+          }
+
+        }
       }
     }
   }
-
 
 
 
@@ -481,6 +1145,10 @@
   }
 
   input:focus{
+    outline-offset: 0;
+    outline: none;
+  }
+  textarea:focus{
     outline-offset: 0;
     outline: none;
   }
