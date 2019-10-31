@@ -13,7 +13,9 @@
   }
 
   window.addEventListener('scroll', e => {
+    if(window.innerWidth >= 768){
     const wScroll = window.pageYOffset;
     moveLayersDependsOnScroll(wScroll);
+    }
   })
 })();

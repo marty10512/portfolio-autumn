@@ -4,6 +4,10 @@
     &-controls{
       display: flex;
       margin-left: 60px;
+      @include tablets{
+        margin: unset;
+        margin-top: 26px;
+      }
 
       &__btn{
         width: 50px;
@@ -69,13 +73,19 @@
 
   &__head{
     display: flex;
-    align-items: center;
     margin-bottom: 15%;
+    @include phones{
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__title{
     margin-right: 20px;
     color: $white;
+    @include phones {
+      margin: 0;
+    }
   }
 }
 .reviews{

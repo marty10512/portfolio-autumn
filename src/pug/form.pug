@@ -1,18 +1,18 @@
 form.form
   h3.form__title Связаться со мной
   .form__data
-    label(for="name" required).form__label
+    label(for="name").form__label
       +icon('user', 'form__label-pic')
       h6.form__label-title Введите ваше имя
-      input(type="text" placeholder="Ковальчук Дмитрий").form__label-input#name
-    label(for="email" required).form__label
+      input(type="text" placeholder="Ковальчук Дмитрий" required).form__label-input#name
+    label(for="email").form__label
       +icon('envelope', 'form__label-pic')
       h6.form__label-title Введите ваш email
-      input(type="email" placeholder="loftschool@study.com").form__label-input#email
-  label(for="letter" required).form__label.form__label--letter
+      input(type="email" placeholder="loftschool@study.com" required).form__label-input#email
+  label(for="letter").form__label.form__label--letter
     +icon('message', 'form__label-pic')
     h6.form__label-title Сообщение к письму
-    textarea(placeholder="Требуется ваша помощь в создании сайта. \n Интересуют сроки и цена вопроса").form__label-textarea#letter
+    textarea(placeholder="Требуется ваша помощь в создании сайта. \n Интересуют сроки и цена вопроса" required).form__label-textarea#letter
   label(for="submit").form__btn
     input(type="submit").visuallyHidden
     button(href="#").form__btn-item отправить

@@ -47,6 +47,7 @@
     }
 
     &-title{
+      font-size: 1rem;
       font-weight: 700;
       color: $dark-grey;
       padding-left: 45px;
@@ -88,19 +89,35 @@
       margin-top: 60px;
       width: 347px;
       height: 80px;
-      background: linear-gradient(to right, $orange, $orange);
+      background: linear-gradient(to right, $orange, #ff9d00);
       font-size: 18px;
       font-weight: 800;
       text-transform: uppercase;
       line-height: 80px;
       text-align: center;
       color: $white;
-      transition: .3s;
+      padding: 0;
+      position: relative;
+      &:after{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        content: "отправить";
+        background-color: $orange;
+        opacity: 1;
+        transition: .3s;
+      }
+
+
       &:focus{
         outline: none;
       }
       &:hover{
-      background: linear-gradient(to right, $orange, #ff9d00);
+        &:after{
+          opacity: 0;
+        }
       }
     }
   }

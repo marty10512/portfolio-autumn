@@ -8,7 +8,7 @@
         .admin-name
           h1.admin-name__title Панель администрирования
         .admin-quit
-          .admin-quit__link(href="#") Выйти
+          a.admin-quit__link(href="#") Выйти
     nav.tabs
       .container.tabs__container
         ul.tabs-list
@@ -225,7 +225,7 @@
                 .created__desc-text
                   p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
                 label.created__desc-link
-                  <link href="http://loftschool.ru"> http://loftschool.ru
+                  a(href="http://loftschool.ru") http://loftschool.ru
               .created__footer
                 label.created__footer-btn Править
                   button.created__footer-btn-item.created__footer-btn-item--pencil
@@ -241,7 +241,7 @@
                 .created__desc-text
                   p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
                 label.created__desc-link
-                  <link href="http://loftschool.ru"> http://loftschool.ru
+                  a(href="http://loftschool.ru") http://loftschool.ru
               .created__footer
                 label.created__footer-btn Править
                   button.created__footer-btn-item.created__footer-btn-item--pencil
@@ -257,7 +257,7 @@
                 .created__desc-text
                   p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
                 label.created__desc-link
-                  <link href="http://loftschool.ru"> http://loftschool.ru
+                  a(href="http://loftschool.ru") http://loftschool.ru
               .created__footer
                 label.created__footer-btn Править
                   button.created__footer-btn-item.created__footer-btn-item--pencil
@@ -948,7 +948,7 @@
       grid-gap: 28px;
       &__item{
         height: 556px;
-        box-shadow: 0 0 0.4375rem rgba(0,0,0,.205);
+        box-shadow: 0 0 7px rgba(0,0,0,.205);
         &--btn{
           background: linear-gradient(90deg, #1459e2, #3f35cb);
           box-shadow: none;
@@ -1041,7 +1041,9 @@
               font-weight: bold;
               color: #a0a5b1;
               cursor: pointer;
+              transition: .3s;
               &:hover{
+                color: #dc9322;
                 .created__footer-btn-item--pencil{
                   background: svg-load("pencil.svg", fill="#1459e2", width="15px", height="15px") center center no-repeat;
                 }

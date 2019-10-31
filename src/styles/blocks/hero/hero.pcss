@@ -1,20 +1,22 @@
 .hero{
   background: url('../images/content/about-bg.jpg') center center /cover no-repeat;
+  height: 100vh;
   min-height: 750px;
+  
   position: relative;
   overflow: hidden;
 
   &__container{
+    height: 100%;
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-top: 62px;
-    padding-bottom: 236px;
+    padding-bottom: 5%;
   }
 
   @include tablets{
@@ -29,6 +31,7 @@
     .owner__title{
       margin: unset;
       opacity: 1;
+      width: 100%;
     }
     .owner__desc-item{
       text-align: center;
@@ -50,6 +53,7 @@
   display: flex;
   flex-direction: row;
   padding-left: 10%;
+  padding-bottom: 10%;
 
   &__desc{
     font-size: 18px;

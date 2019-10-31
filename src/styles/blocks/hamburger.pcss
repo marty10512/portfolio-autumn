@@ -24,8 +24,8 @@
 
   &__item{
     position: relative;
-    width: 30px;
-    height: 22px;
+    width: 30Px;
+    height: 22Px;
 
     &-string{
       position: absolute;
@@ -36,6 +36,7 @@
       border: 2px solid $white;
       opacity: 1;
       transition: .3s;
+      box-shadow: 0 0 7px rgba(0,0,0,.205);
     }
 
     &:after{
@@ -43,20 +44,22 @@
       display: block;
       content: "";
       bottom: 0;
-      left: 1Px;
+      left: 3Px;
       width: 20Px;
       border: 2px solid $white;
       transition: .3s;
+      box-shadow: 0 0 7px rgba(0,0,0,.205);
     }
     &:before{
       position: absolute;
       display: block;
       content: "";
       top: 0;
-      left: 1Px;
+      left: 3Px;
       width: 20Px;
       border: 2px solid $white;
       transition: .3s;
+      box-shadow: 0 0 7px rgba(0,0,0,.205);
     }
   }
 }
@@ -67,13 +70,13 @@
       opacity: 0;
     }
     &:before{
-      top: 8.5px;
+      top: 8.5Px;
       left: 0;
       transform: rotate(-45deg);
       border-color: $grey;
     }
     &:after{
-      bottom: 8.5px;
+      bottom: 8.5Px;
       left: 0;
       transform: rotate(45deg);
       border-color: $grey;
@@ -82,7 +85,7 @@
   
 }
 
-.hamnurger-menu{
+.hamburger-menu{
   display: block;
   position: fixed;
   height: 100vh;
@@ -98,6 +101,7 @@
     height: 100%;
 
     .menu{
+      width: unset;
       position: absolute;
       top: 25%;
       left: 20%;
@@ -121,7 +125,7 @@
 }
 
 @include phones {
-  .hamnurger-menu{
+  .hamburger-menu{
     width: 100%;
   }
 }
