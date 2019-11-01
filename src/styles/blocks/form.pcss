@@ -157,3 +157,20 @@
     }
   }
 }
+
+.form-error{
+  position: absolute;
+  opacity: 0;
+  transition: .3s;
+}
+
+.error{
+  border-color: $error;
+
+  .form-error{
+    opacity: 1;
+  }
+  .form__label-pic{
+    fill: $error;
+  }
+}

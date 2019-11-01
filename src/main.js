@@ -9,3 +9,4 @@ import "./scripts/works-slider";
 import "./scripts/comments-slider";
 import "./scripts/smooth-scroll";
 import "./scripts/hamburger";
+import "./scripts/form-validation";
