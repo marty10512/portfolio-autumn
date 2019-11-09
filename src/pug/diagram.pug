@@ -9,7 +9,7 @@ script(type="text/x-template")#diagram-row
   .diagram-row
     h5.diagram__title {{skill.skillsGroup}}
     ul.diagram__group
-      li.diagram__group-item(v-for='(skillPercent, skillName) in skill.skills' :key='skill.skills')
+      li.diagram__group-item(v-for='(skillPercent, skillName) in skill.skills' :key='skill.skills.skillName')
           skill(
             :skill-name='skillName'
             :skill-percent='skillPercent'

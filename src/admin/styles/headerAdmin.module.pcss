@@ -1,0 +1,51 @@
+.admin-header{
+  color: #fff;
+  background-color: #40405f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &__container{
+    display: flex;
+    .owner-data{
+      display: flex;
+       &__photo{
+         display: block;
+         height: 45px;
+         width: 45px;
+         border-radius: 50%;
+         overflow: hidden;
+         margin: auto;
+       }
+       &__name{
+         font-size: 18px;
+         font-weight: 600;
+         margin: auto 0 auto 19px;
+       }
+    }
+    .admin-name{
+      margin-left: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &__title{
+        font-size: 14px;
+        color: #a0a0b2;
+      }
+    }
+    .admin-quit{
+      margin-left: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &__link{
+        color: #a0a0b2;
+        text-decoration: underline;
+        cursor: pointer;
+        transition: .3s;
+        &:hover{
+          color: #dc9322;
+        }
+      }
+    }
+  }
+}
