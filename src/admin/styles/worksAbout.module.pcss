@@ -1,3 +1,5 @@
+@import "../../styles/mixins.pcss";
+
 .works{
     display: block;
     padding: 0 2.5%;
@@ -28,6 +30,13 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 30px;
+        &--works{
+          @include tablets {
+          display: flex;
+          flex-direction: column;
+          padding: 50px 16% 0 16%;
+          }
+        }
         .left{
         .section-editing__photo{
           width: 100%;
@@ -132,8 +141,12 @@
         }
         .section-editing__tags{
           display: flex;
-          margin-top: 21px;
+          @include tabletsSmall{
+            flex-wrap: wrap;
+            justify-content: center;
+          }
           &-item{
+            margin-top: 21px;
             background-color: #f3f5f9;
             font-size: 13px;
             line-height: 30px;
@@ -161,13 +174,21 @@
           }
         }
         .section-editing__btns{
-          margin-top: 40px;
+          
           display: flex;
           flex-direction: row;
           justify-content: flex-end;
+          @include tabletsSmall{
+            flex-direction: column;
+            align-items:  center;
+          }
           .btns-item{
+            margin-top: 40px;
             cursor: pointer;
             margin-left: 20px;
+            @include tabletsSmall{
+              margin-left: unset;
+            }
             &--save{
               position: relative;
               &:after{
@@ -219,6 +240,9 @@
             }
           }
         }
+        @include tablets{
+          margin-top: 60px;
+        }
         }
       }
     }
@@ -227,12 +251,18 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 28px;
+      @include tablets {
+        grid-template-columns: repeat(2, 1fr);
+      }
       &__item{
         min-height: 556px;
         box-shadow: 0 0 7px rgba(0,0,0,.205);
         &--btn{
           background: linear-gradient(90deg, #1459e2, #3f35cb);
           box-shadow: none;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
         }
         .item__label{
           display: flex;

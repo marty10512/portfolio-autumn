@@ -9,7 +9,7 @@
             .section-editing__header
               h3.section-editing__header-title Редактирование работы
 
-            .section-editing__content
+            .section-editing__content.section-editing__content--works
 
               .left
                 .section-editing__photo

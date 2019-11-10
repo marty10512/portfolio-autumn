@@ -1,9 +1,14 @@
+@import "../../styles/mixins.pcss";
+
 .comments{
     display: block;
     padding: 0 2.5%;
 
     .section-editing__content{
       grid-template-columns: 210px 1fr 110px;
+      @include tablets {
+        grid-template-columns: 1fr 55%;
+      }
     }
 
     .left{
@@ -21,9 +26,18 @@
       flex-direction: column;
       justify-content: center;
 
+      @include tabletsSmall{
+        height: 150px;
+        width: 150px;
+      }
+
       &-item{
         display: block;
         margin: auto;
+        @include tabletsSmall{
+          max-height: 75%;
+          max-width: 75%;
+        }
       }
     }
 
@@ -39,13 +53,28 @@
       }
     }
 
+    .right{
+      @include tablets {
+        margin-top: unset;
+      }
+    }
+
     .right__group{
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 30px;
+      @include tablets {
+        display: flex;
+        flex-direction: column;
+      }
 
       .section-editing__label{
         margin-top: 0;
+        @include tablets{
+          &:last-child{
+            margin-top: 40px;
+          }
+        }
       }
     }
 
