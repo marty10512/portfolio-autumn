@@ -3,6 +3,15 @@
 .works{
     display: block;
     padding: 0 2.5%;
+    @include phones {
+      padding: unset;
+    }
+
+    &__container{
+      @include phones {
+        width: 100%;
+      }
+    }
   }
 
   .section{
@@ -35,6 +44,9 @@
           display: flex;
           flex-direction: column;
           padding: 50px 16% 0 16%;
+          }
+          @include phones {
+            padding: 50px 6% 0 6%;
           }
         }
         .left{
@@ -137,6 +149,9 @@
             &:focus{
               border-color: #383bcf;
             }
+            @include phones {
+              height: 205px;
+            }
           }
         }
         .section-editing__tags{
@@ -182,6 +197,10 @@
             flex-direction: column;
             align-items:  center;
           }
+          @include phones {
+            flex-direction: row;
+            justify-content: center;
+          }
           .btns-item{
             margin-top: 40px;
             cursor: pointer;
@@ -218,16 +237,17 @@
             &__cancel{
               line-height: 56px;
               padding: 0 40px;
-              border-radius: 25px;
               font-size: 16px;
               font-weight: bold;
               color: #1459e2;
-              border: 2px solid transparent;
+              border: none;
               transition: .3s;
               cursor: pointer;
-              text-transform: uppercase;
               &:hover{
-                border-color: #1459e2;
+                color: #5500f2;
+              }
+              @include phones{
+                padding: 0 20px;
               }
             }
             &__save{
@@ -254,15 +274,24 @@
       @include tablets {
         grid-template-columns: repeat(2, 1fr);
       }
+      @include phones {
+        grid-template-columns: 1fr;
+      }
       &__item{
         min-height: 556px;
         box-shadow: 0 0 7px rgba(0,0,0,.205);
+        @include phones {
+          min-height: unset;
+        }
         &--btn{
           background: linear-gradient(90deg, #1459e2, #3f35cb);
           box-shadow: none;
           display: flex;
           flex-direction: column;
           justify-content: center;
+          @include phones {
+            min-height: 111px;
+          }
         }
         .item__label{
           display: flex;
@@ -276,6 +305,9 @@
             .label__btn:after{
               opacity: 1;
             }
+          }
+          @include phones {
+            flex-direction: row;
           }
           .label__btn{
             background: unset;
@@ -302,6 +334,16 @@
               transition: .3s;
               opacity: 0;
             }
+            @include phones {
+              width: 50Px;
+              height: 50Px;
+              font-size: 24Px;
+              &:after{
+                width: 46Px;
+                height: 46Px;
+                line-height: 46Px;
+              }
+            }
           }
           .label__title{
             margin-top: 30px;
@@ -312,6 +354,11 @@
             padding: 0 27%;
             text-align: center;
             transition: .3s;
+            @include phones {
+              margin-top: unset;
+              margin-left: 20px;
+              padding: unset;
+            }
           }
         }
         .created{

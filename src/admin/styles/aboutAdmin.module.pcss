@@ -3,11 +3,18 @@
 .about{
     display: block;
     padding: 0 2.5%;
+    @include phones {
+      padding: unset;
+    }
     
     &__add{
       display: flex;
       margin-left: 59px;
       cursor: pointer;
+      @include phones {
+        margin-left: unset;
+        margin-top: 30px;
+      }
       &:hover{
         .about__add-title{
           border-color: #383bcf;
@@ -28,6 +35,9 @@
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
+        }
+        @include phones {
+          margin: unset;
         }
       }
       &-title{
@@ -50,6 +60,10 @@
         align-items: strech;
         ::-webkit-input-placeholder{
           color: #b8bcc5;
+        }
+
+        @include phones {
+          grid-template-columns: 1fr;
         }
 
         &__item{
@@ -170,6 +184,9 @@
                         top: 50%;
                         transform: translateY(-50%);
                         right: 25%;
+                        @include tabletsSmall {
+                          right: 0;
+                        }
                       }
 
                       &__input{
@@ -319,6 +336,12 @@
             }
           }
         }
+      }
+    }
+
+    &__container{
+      @include phones {
+        width: 100%;
       }
     }
   }

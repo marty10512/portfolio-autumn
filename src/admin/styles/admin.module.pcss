@@ -22,6 +22,10 @@
 .section__header{
   display: flex;
   padding-top:60px;
+  @include phones {
+    flex-direction: column;
+    margin-left: 7.5%;
+  }
   .section__title{
     font-weight: bold;
     font-size: 21px;

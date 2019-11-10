@@ -39,7 +39,7 @@
                     button.tags-cross
                 .section-editing__btns
                   label.btns-item
-                    input.btns-item__cancel(type="reset" value="отмена")
+                    input.btns-item__cancel(type="reset" value="Отмена")
                   label.btns-item.btns-item--save
                     input.btns-item__save.btn(type="submit" value="сохранить")
 

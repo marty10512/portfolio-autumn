@@ -3,11 +3,23 @@
 .comments{
     display: block;
     padding: 0 2.5%;
+    @include phones {
+      padding: unset;
+    }
+
+    &__container{
+      @include phones {
+        width: 100%;
+      }
+    }
 
     .section-editing__content{
       grid-template-columns: 210px 1fr 110px;
       @include tablets {
         grid-template-columns: 1fr 55%;
+      }
+      @include phones {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -29,6 +41,10 @@
       @include tabletsSmall{
         height: 150px;
         width: 150px;
+      }
+      @include phones{
+        height: 200px;
+        width: 200px;
       }
 
       &-item{
@@ -87,6 +103,12 @@
       .created{
         grid-template-rows: 110px 1fr 90px;
       }
+
+      .item__label{
+        @include phones {
+            min-height: 111px;
+          }
+      }
     }
 
     .created{
@@ -97,9 +119,14 @@
       display: flex;
       justify-content: space-around;
       border-bottom: 1px solid #dedee0;
+      @include phones {
+        justify-content: flex-start;
+      }
 
       .author-left{
         margin: auto 0;
+        height: 50Px;
+        width: 50Px;
         .author__pic{
           display: block;
           height: 50px;
@@ -112,6 +139,9 @@
 
       .author-right{
         margin: auto 0;
+        @include phones{
+          margin-left: 20px;
+        }
         .author__name{
           font-size: 18px;
           font-weight: bold;

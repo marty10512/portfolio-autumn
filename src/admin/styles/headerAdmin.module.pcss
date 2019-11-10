@@ -1,3 +1,5 @@
+@import "../../styles/mixins.pcss";
+
 .admin-header{
   color: #fff;
   background-color: #40405f;
@@ -6,16 +8,28 @@
   justify-content: center;
   &__container{
     display: flex;
-    .owner-data{
+    .owner__desc{
       display: flex;
-       &__photo{
+      width: 100%;
+      @include phones {
+        flex-direction: column;
+      }
+    }
+    .owner-photo{
+      height: 45Px;
+      min-width: 45Px;
+      &__item{
          display: block;
-         height: 45px;
-         width: 45px;
+         height: 45Px;
+         width: 45Px;
          border-radius: 50%;
          overflow: hidden;
          margin: auto;
        }
+    }
+    .owner-data{
+      display: flex;
+       
        &__name{
          font-size: 18px;
          font-weight: 600;
@@ -27,6 +41,9 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      @include phones {
+        display: none;
+      }
       &__title{
         font-size: 14px;
         color: #a0a0b2;
@@ -37,6 +54,9 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      @include phones {
+        margin-left: 19px;
+      }
       &__link{
         color: #a0a0b2;
         text-decoration: underline;
