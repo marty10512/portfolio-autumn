@@ -51,7 +51,7 @@
           li.section-list__item
             .created
               .created__pic
-                img.created__pic-item(src="../../images/content/slider-1.png")
+                img.created__pic-item(src="../../../images/content/slider-1.png")
               .created__desc
                 .created__desc-title 
                   h5 Сайт школы образования
@@ -67,7 +67,7 @@
           li.section-list__item
             .created
               .created__pic
-                img.created__pic-item(src="../../images/content/slider-2.png")
+                img.created__pic-item(src="../../../images/content/slider-2.png")
               .created__desc
                 .created__desc-title 
                   h5 Сайт школы образования
@@ -83,7 +83,7 @@
           li.section-list__item
             .created
               .created__pic
-                img.created__pic-item(src="../../images/content/slider-3.png")
+                img.created__pic-item(src="../../../images/content/slider-3.png")
               .created__desc
                 .created__desc-title 
                   h5 Сайт школы образования
@@ -99,7 +99,7 @@
 </template>
 
 <script>
-import style from '../styles/worksAbout.module.pcss'
+import style from '../../styles/worksAbout.module.pcss'
 export default {
 
 }

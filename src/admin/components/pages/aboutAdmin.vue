@@ -153,7 +153,7 @@
 </template>
 
 <script>
-import style from '../styles/aboutAdmin.module.pcss'
+import style from '../../styles/aboutAdmin.module.pcss'
 export default {
   components: {
 

@@ -13,7 +13,7 @@
 
               .left
                 .photo__preview
-                  img.photo__preview-item(src="../../images/icons/user.png")
+                  img.photo__preview-item(src="../../../images/icons/user.png")
                 button(href="#").photo__btn-item Добавить фото
 
               .right
@@ -42,7 +42,7 @@
             .created
               .created__author
                 .author-left
-                  img.author__pic(src="../../images/content/wouwa.jpg")
+                  img.author__pic(src="../../../images/content/wouwa.jpg")
                 .author-right
                   h6.author__name Владимир Сабанцев
                   p.author__position Преподаватель
@@ -58,7 +58,7 @@
             .created
               .created__author
                 .author-left
-                  img.author__pic(src="../../images/content/wouwa.jpg")
+                  img.author__pic(src="../../../images/content/wouwa.jpg")
                 .author-right
                   h6.author__name Владимир Сабанцев
                   p.author__position Преподаватель
@@ -74,7 +74,7 @@
             .created
               .created__author
                 .author-left
-                  img.author__pic(src="../../images/content/wouwa.jpg")
+                  img.author__pic(src="../../../images/content/wouwa.jpg")
                 .author-right
                   h6.author__name Владимир Сабанцев
                   p.author__position Преподаватель
@@ -90,7 +90,7 @@
             .created
               .created__author
                 .author-left
-                  img.author__pic(src="../../images/content/wouwa.jpg")
+                  img.author__pic(src="../../../images/content/wouwa.jpg")
                 .author-right
                   h6.author__name Владимир Сабанцев
                   p.author__position Преподаватель
@@ -105,7 +105,7 @@
 </template>
 
 <script>
-import style from '../styles/commentsAdmin.module.pcss'
+import style from '../../styles/commentsAdmin.module.pcss'
 export default {
   
 }
