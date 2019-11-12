@@ -1,22 +1,22 @@
 <template lang="pug">
   .admin-panel
-    headerAdmin
-    tabsAdmin
+    appHeader
+    appTabs
     router-view
 </template>
 
 <script>
-import style from './styles/admin.module.pcss'
-import headerAdmin from './components/headerAdmin.vue'
-import tabsAdmin from './components/tabsAdmin.vue'
-import aboutAdmin from './components/pages/aboutAdmin.vue'
-import worksAdmin from './components/pages/worksAdmin.vue'
-import commentsAdmin from './components/pages/commentsAdmin.vue'
+import style from './main.pcss'
+import appHeader from './components/appHeader.vue'
+import appTabs from './components/appTabs.vue'
+import about from './components/about/about.vue'
+import works from './components/works/works.vue'
+import comments from './components/comments/comments.vue'
 
 export default {
   name: 'app',
   components: {
-    headerAdmin, tabsAdmin, aboutAdmin, worksAdmin, commentsAdmin
+    appHeader, appTabs, about, works, comments
   },
   data() {
     return {

@@ -1,0 +1,91 @@
+.skills-list__skill-item{
+  width: 100%;
+  padding-top: 3%;
+}
+
+.skill-item{
+  display: grid;
+  grid-template-columns: 1fr 90px 30px 30px;
+  line-height: 32px;
+  @include tablets{
+    grid-template-columns: 40% 30% 15% 15%;
+  }
+  input:read-only{
+    border: none;
+  }
+
+  .active{
+    .item-edit{
+      display: none;
+    }
+    .item-delete{
+      display: none;
+    }
+    .skills-block__btn{
+    display: flex;
+    }
+    .skills-block__close-item{
+      display: block;
+    }
+  }
+}
+
+.item-name{
+  width: 90%;
+  color: #414c63;
+  padding: 0 10px;
+  border: none;
+  border-bottom: 1px solid #000;
+  transition: .3s;
+  &:focus{
+    border-color: #383bcf;
+  }
+}
+
+.item-percent{
+  display: block;
+  position: relative;
+  &:after{
+    position: absolute;
+    display: block;
+    content: "%";
+    color: #414c63;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 25%;
+    @include tabletsSmall {
+      right: 0;
+    }
+  }
+}
+
+.item-percent__input{
+  line-height: 32px;
+}
+
+.item-edit{
+  display: block;
+  height: 30px;
+  width: 30px;
+  display: block;
+  background: svg-load("pencil.svg", fill="#a0a5b1", width="15px", height="15px") center center no-repeat;
+  transition: .3s;
+  &:hover{
+    background: svg-load("pencil.svg", fill="#5500f2", width="15px", height="15px") center center no-repeat;
+  }
+}
+
+.item-delete{
+  display: block;
+  height: 30px;
+  width: 30px;
+  display: block;
+  background: svg-load("trash.svg", fill="#a0a5b1", width="15px", height="15px") center center no-repeat;
+  transition: .3s;
+  &:hover{
+    background: svg-load("trash.svg", fill="#5500f2", width="15px", height="15px") center center no-repeat;
+  }
+}

@@ -1,11 +1,11 @@
 import Vue from "vue";
-import VueRouter from "vue-router"
+import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
 
-import about from './components/pages/aboutAdmin.vue';
-import works from './components/pages/worksAdmin.vue';
-import comments from './components/pages/commentsAdmin.vue';
+import about from './components/about/about.vue';
+import works from './components/works/works.vue';
+import comments from './components/comments/comments.vue';
 
 const routes = [
   {

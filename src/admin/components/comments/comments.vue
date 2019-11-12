@@ -105,7 +105,6 @@
 </template>
 
 <script>
-import style from '../../styles/commentsAdmin.module.pcss'
 export default {
   
 }

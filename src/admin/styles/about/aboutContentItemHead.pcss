@@ -1,0 +1,47 @@
+.skills-block__head{
+  width: 95%;
+  border-bottom: 1px solid #dedee0;
+    padding-top: 4%;
+    display: flex;
+}
+
+.skills-block__name{
+  padding: 0 10px;
+  width: 75%;
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 18px;
+  line-height: 34px;
+  height: 34px;
+  font-weight: bold;
+  color: #414c63;
+  transition: .3s;
+  &:focus{
+    border-color: #383bcf;
+  }
+}
+
+.skills-block__btn{
+  margin-left: auto;
+  margin-right: 19px;
+}
+
+.skills-block__btn-item{
+  width: 20px;
+  height: 20px;
+  background: svg-load("tick.svg", fill="#00d70a", width="15px", height="15px") center center no-repeat;
+  transition: .3s;
+  &:hover{
+    background: svg-load("tick.svg", fill="green", width="15px", height="15px") center center no-repeat;
+  }
+}
+
+.skills-block__close-item{
+  width: 20px;
+  height: 20px;
+  background: svg-load("remove.svg", fill="#bf2929", width="13px", height="13px") center center no-repeat;
+  transition: .3s;
+  &:hover{
+    background: svg-load("remove.svg", fill="red", width="13px", height="13px") center center no-repeat;
+  }
+}

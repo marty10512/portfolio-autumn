@@ -11,7 +11,7 @@
           router-link(
             tag="button"
             to="/works"
-          ) Работы
+          ).tabs-list__item Работы
         li.tabs-list__item
           router-link(
             tag="button"
@@ -20,7 +20,6 @@
 </template>
 
 <script>
-import style from '../styles/tabsAdmin.module.pcss'
 
 export default {
   

@@ -13,7 +13,6 @@
 </template>
 
 <script>
-import style from '../styles/headerAdmin.module.pcss';
 
 export default {
   
