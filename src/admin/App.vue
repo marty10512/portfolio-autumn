@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import { mapState, mapActions, mapGetters } from "vuex"
 import style from './main.pcss'
 import appHeader from './components/appHeader.vue'
 import appTabs from './components/appTabs.vue'

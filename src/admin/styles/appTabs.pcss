@@ -3,26 +3,27 @@
 .tabs{
   background-color: #fff;
   width: 100%;
-  &-list{
-    display: flex;
-    line-height: 80px;
-    &__item{
-      width: 124px;
-      cursor: pointer;
-      border-bottom: 3px solid transparent;
-      transition: .3s;
-      text-align: center;
-      @include phones {
-        width: 100%;
-      }
-      &:hover{
-        color: #5500f2;
-        border-color: #5500f2;
-      }
-    }
-    .active{
-      color: #383bcf;
-      border-color: #383bcf;
-    }
+}
+.tabs-list{
+  display: flex;
+  line-height: 80px;
+  .active{
+    color: #383bcf;
+    border-color: #383bcf;
+  }
+}
+.tabs-list__item{
+  width: 124px;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: .3s;
+  text-align: center;
+  position: relative;
+  @include phones {
+    width: 100%;
+  }
+  &:hover{
+    color: #5500f2;
+    border-color: #5500f2;
   }
 }
