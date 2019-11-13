@@ -6,12 +6,13 @@
           router-link(
             tag="button"
             to="/"
+            
           ) Обо мне
         li.tabs-list__item
           router-link(
             tag="button"
             to="/works"
-          ).tabs-list__item Работы
+          ) Работы
         li.tabs-list__item
           router-link(
             tag="button"
