@@ -1,6 +1,6 @@
 # Автор работы Мартемьянов Андрей, студент LoftSchool с 01.07.19 по профессии "Веб-разработчик"
 # Сайт-портфолио, находится на последней стадии доработки админ-панели.
-# Ссылка на GH-Pages: https://marty10512.github.io/portfolio-autumn/dist/. Для перехода в admin панель: /admin.
+# Ссылка на GH-Pages: https://marty10512.github.io/portfolio-autumn/dist/. Для перехода в admin панель: admin/.
 
 > Перед установкой зависимостей и запуском проекта убедитесь, что у вас установлена [последняя версия Node.js & NPM](https://nodejs.org/en/download/current/), а так же 
 [последняя версия Yarn](https://yarnpkg.com/ru/docs/install)
