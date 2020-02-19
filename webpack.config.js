@@ -142,6 +142,8 @@ module.exports = (env, argv) => {
       })
     ]);
 
+    
+
     config.optimization = {};
 
     config.optimization.minimizer = [
